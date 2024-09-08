@@ -30,7 +30,7 @@ const Sidebar = ({
       <div className="flex flex-col items-center justify-end space-y-2">
         <div
           className={`w-9 h-9 rounded-md flex items-center justify-center cursor-pointer transition duration-300 ${
-            active === "dashboard" ? "bg-[#bad7e8]" : "bg-white"
+            active === "dashboard" ? "bg-[#d4eff7]" : "bg-white"
           }`}
           onClick={handleDashboardClick}
         >
@@ -42,7 +42,7 @@ const Sidebar = ({
         </div>
         <div
           className={`w-9 h-9 rounded-md flex items-center justify-center cursor-pointer transition duration-300 ${
-            active === "manage" ? "bg-[#bad7e8]" : "bg-white"
+            active === "manage" ? "bg-[#d4eff7]" : "bg-white"
           }`}
           onClick={handleManageClick}
         >

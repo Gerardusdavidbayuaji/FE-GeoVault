@@ -18,7 +18,11 @@ const CustomFormSelect = (props: Props) => {
 
   return (
     <Select>
-      <SelectTrigger className={triggerClassName ?? "w-24 h-7"}>
+      <SelectTrigger
+        className={
+          triggerClassName ?? "w-24 h-7 border-[#00b7cc] text-[#00b7cc]"
+        }
+      >
         <SelectValue placeholder={title} />
       </SelectTrigger>
       <SelectContent>

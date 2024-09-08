@@ -350,7 +350,7 @@ const Download = () => {
       </div>
       <AlertDialog>
         <AlertDialogTrigger>
-          <Button className="bg-[#1c60c7] hover:bg-[#1c60c7] w-full rounded-md">
+          <Button className="bg-[#00527a] hover:bg-[#00527a] w-full rounded-md">
             <div className="flex gap-2 items-center justify-center">
               <img src="/assets/download-icon.png" className="w-6 h-auto" />
               <p className="font-normal text-sm text-white">Download</p>

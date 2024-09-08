@@ -25,15 +25,15 @@ import { Input } from "@/components/ui/input";
 
 import DropDownIcon from "/assets/drop-down-icon.png";
 import NotifIcon from "/assets/notif-icon.png";
-import PuprIcon from "/assets/pupr-icon.jpg";
+import AdminIcon from "/assets/admin_icon.jpg";
 
 const Navbar = () => {
   return (
-    <header className="bg-[#1c60c7] w-full p-2">
+    <header className="bg-[#00527a] w-full p-2">
       <nav className="flex gap-3 justify-end">
         <Dialog>
           <DialogTrigger asChild>
-            <div className="flex outline outline-[#4D93FD] outline-2 items-center justify-center w-8 h-8 m-2 rounded-full cursor-pointer">
+            <div className="flex outline outline-[#00b7cc] outline-2 items-center justify-center w-8 h-8 m-2 rounded-full cursor-pointer">
               <img
                 src={NotifIcon}
                 alt="Notification Icon"
@@ -47,8 +47,8 @@ const Navbar = () => {
             </DialogHeader>
             <div className="overflow-y-scroll py-2 pr-2">
               <div className="text-sm font-normal">
-                <div className="bg-[#C2D9FA] rounded-md p-2">
-                  <h1 className="text-[#2272EA] font-medium">
+                <div className="bg-[#d4eff7] rounded-md p-2">
+                  <h1 className="text-[#00527a] font-medium">
                     BBWS Pamali Juana
                   </h1>
                 </div>
@@ -63,19 +63,19 @@ const Navbar = () => {
                 <div className="flex items-center justify-end text-xs py-1 px-2 ">
                   7/20/2024
                 </div>
-                <hr className="border-1 border-[#767676] mb-2" />
+                <hr className="border-1 border-[#7db5c5] mb-2" />
               </div>
             </div>
           </DialogContent>
         </Dialog>
 
-        <div className="flex bg-[#4D93FD] rounded-full items-center justify-center gap-2">
+        <div className="flex bg-[#00b7cc] rounded-full items-center justify-center gap-2">
           <img
-            src={PuprIcon}
-            alt="PUPR Icon"
+            src={AdminIcon}
+            alt="Admin Icon"
             className="w-6 h-auto ml-2 rounded-full"
           />
-          <p className="text-white text-base font-normal">admin_sda</p>
+          <p className="text-white text-base font-normal">admin_geovault</p>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="ml-3 mr-4">
@@ -83,7 +83,7 @@ const Navbar = () => {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 mr-4 mt-6">
-              <DropdownMenuLabel>Akun admin_sda</DropdownMenuLabel>
+              <DropdownMenuLabel>Akun admin_geovault</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuGroup className="space-y-1">
                 <Dialog>
