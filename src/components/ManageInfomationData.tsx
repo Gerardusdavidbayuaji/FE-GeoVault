@@ -151,7 +151,7 @@ const ManageInformationData = () => {
                 <Input
                   type="text"
                   placeholder="Cari File"
-                  className="rounded-none rounded-l-md h-7 border-[#00b7cc] text-[#00b7cc] text-xs font-medium"
+                  className="rounded-none rounded-l-md h-7 text-xs font-medium"
                 />
                 <Button className="bg-[#00b7cc] hover:bg-[#00b7cc] rounded-none rounded-r-md h-7 w-8 p-1">
                   <img src="assets/search-icon.png" className="w-3 h-auto" />
@@ -169,7 +169,7 @@ const ManageInformationData = () => {
                   </DialogHeader>
                   <div className="grid grid-cols-2 gap-2">
                     <Select>
-                      <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
+                      <SelectTrigger className="w-full">
                         <SelectValue placeholder="Januari" />
                       </SelectTrigger>
                       <SelectContent>
@@ -188,7 +188,7 @@ const ManageInformationData = () => {
                     </Select>
 
                     <Select>
-                      <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
+                      <SelectTrigger className="w-full">
                         <SelectValue placeholder="2024" />
                       </SelectTrigger>
                       <SelectContent>
@@ -200,7 +200,7 @@ const ManageInformationData = () => {
                     </Select>
                   </div>
                   <Select>
-                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
+                    <SelectTrigger className="w-full">
                       <SelectValue placeholder="Semua B/BWS" />
                     </SelectTrigger>
                     <SelectContent>
@@ -220,7 +220,7 @@ const ManageInformationData = () => {
                     </SelectContent>
                   </Select>
                   <Select>
-                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
+                    <SelectTrigger className="w-full">
                       <SelectValue placeholder="Semua WS" />
                     </SelectTrigger>
                     <SelectContent>
@@ -232,7 +232,7 @@ const ManageInformationData = () => {
                     </SelectContent>
                   </Select>
                   <Select>
-                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
+                    <SelectTrigger className="w-full">
                       <SelectValue placeholder="Semua Data" />
                     </SelectTrigger>
                     <SelectContent>
@@ -244,7 +244,7 @@ const ManageInformationData = () => {
                     </SelectContent>
                   </Select>
                   <Select>
-                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
+                    <SelectTrigger className="w-full">
                       <SelectValue placeholder="Semua Source" />
                     </SelectTrigger>
                     <SelectContent>
@@ -265,7 +265,7 @@ const ManageInformationData = () => {
               </Dialog>
             </div>
 
-            <div className="flex gap-1 text-[#00b7cc]">
+            <div className="flex gap-1">
               <CustomFormSelect
                 title="Tahun"
                 value="tahun_1"
@@ -273,7 +273,7 @@ const ManageInformationData = () => {
               />
 
               <Select>
-                <SelectTrigger className="w-24 h-7 border-[#00b7cc] text-[#00b7cc]">
+                <SelectTrigger className="w-24 h-7">
                   <SelectValue placeholder="Bulan" />
                 </SelectTrigger>
                 <SelectContent>
@@ -293,7 +293,7 @@ const ManageInformationData = () => {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-32 h-7 border-[#00b7cc] text-[#00b7cc]">
+                <SelectTrigger className="w-32 h-7">
                   <SelectValue placeholder="Semua WS" />
                 </SelectTrigger>
                 <SelectContent>
@@ -306,7 +306,7 @@ const ManageInformationData = () => {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-32 h-7 border-[#00b7cc] text-[#00b7cc]">
+                <SelectTrigger className="w-32 h-7">
                   <SelectValue placeholder="Semua Source" />
                 </SelectTrigger>
                 <SelectContent>
@@ -365,7 +365,7 @@ const ManageInformationData = () => {
             </div>
             <div className="text-xs font-normal">
               <Pagination className="text-xs font-normal">
-                <PaginationContent className="text-[#00b7cc]">
+                <PaginationContent className="text-[#00527a]">
                   <PaginationItem>
                     <PaginationPrevious
                       href="#"
@@ -375,7 +375,7 @@ const ManageInformationData = () => {
                   <PaginationItem>
                     <PaginationLink
                       href="#"
-                      className="text-xs text-white font-normal bg-[#00b7cc] hover:bg-[#00b7cc] hover:text-white h-7 w-7"
+                      className="text-xs text-white font-normal bg-[#00527a] hover:bg-[#00527a] hover:text-white h-7 w-7"
                     >
                       1
                     </PaginationLink>
