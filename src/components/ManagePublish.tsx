@@ -161,15 +161,15 @@ const ManagePublish = () => {
                 <Input
                   type="text"
                   placeholder="Cari File"
-                  className="rounded-none rounded-l-md h-7 border-[#364878] text-[#364878] text-xs font-medium"
+                  className="rounded-none rounded-l-md h-7 border-[#00b7cc] text-[#00b7cc] text-xs font-medium"
                 />
-                <Button className="bg-[#1c60c7] hover:bg-[#1c60c7] rounded-none rounded-r-md h-7 w-8 p-1">
+                <Button className="bg-[#00b7cc] hover:bg-[#00b7cc] rounded-none rounded-r-md h-7 w-8 p-1">
                   <img src="assets/search-icon.png" className="w-3 h-auto" />
                 </Button>
               </div>
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button className="bg-[#1c60c7] hover:bg-[#1c60c7] rounded-md h-7 w-8 p-1">
+                  <Button className="bg-[#00b7cc] hover:bg-[#00b7cc] rounded-md h-7 w-8 p-1">
                     <img src="assets/filter.png" className="w-3 h-auto" />
                   </Button>
                 </DialogTrigger>
@@ -179,7 +179,7 @@ const ManagePublish = () => {
                   </DialogHeader>
                   <div className="grid grid-cols-2 gap-2">
                     <Select>
-                      <SelectTrigger className="w-full">
+                      <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
                         <SelectValue placeholder="Januari" />
                       </SelectTrigger>
                       <SelectContent>
@@ -198,7 +198,7 @@ const ManagePublish = () => {
                     </Select>
 
                     <Select>
-                      <SelectTrigger className="w-full">
+                      <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
                         <SelectValue placeholder="2024" />
                       </SelectTrigger>
                       <SelectContent>
@@ -210,7 +210,7 @@ const ManagePublish = () => {
                     </Select>
                   </div>
                   <Select>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
                       <SelectValue placeholder="Semua B/BWS" />
                     </SelectTrigger>
                     <SelectContent>
@@ -230,7 +230,7 @@ const ManagePublish = () => {
                     </SelectContent>
                   </Select>
                   <Select>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
                       <SelectValue placeholder="Semua WS" />
                     </SelectTrigger>
                     <SelectContent>
@@ -242,7 +242,7 @@ const ManagePublish = () => {
                     </SelectContent>
                   </Select>
                   <Select>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
                       <SelectValue placeholder="Semua Data" />
                     </SelectTrigger>
                     <SelectContent>
@@ -254,7 +254,7 @@ const ManagePublish = () => {
                     </SelectContent>
                   </Select>
                   <Select>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full border-[#00b7cc] text-[#00b7cc]">
                       <SelectValue placeholder="Semua Source" />
                     </SelectTrigger>
                     <SelectContent>
@@ -264,10 +264,10 @@ const ManagePublish = () => {
                     </SelectContent>
                   </Select>
                   <DialogFooter>
-                    <Button className="bg-white outline outline-[1px] outline-[#2272EA] text-[#2272EA] hover:bg-white text-sm font-normal">
+                    <Button className="bg-white outline outline-[1px] outline-[#00b7cc] text-[#00b7cc] hover:bg-white text-sm font-normal">
                       Reset
                     </Button>
-                    <Button className="bg-[#2272EA] hover:bg-[#2272EA] text-sm font-normal">
+                    <Button className="bg-[#00b7cc] hover:bg-[#00b7cc] text-sm font-normal">
                       Filter
                     </Button>
                   </DialogFooter>
@@ -277,11 +277,11 @@ const ManagePublish = () => {
 
             <div className="flex gap-1">
               <Select>
-                <SelectTrigger className="w-24 h-7">
+                <SelectTrigger className="w-24 h-7 border-[#00b7cc] text-[#00b7cc]">
                   <SelectValue placeholder="Tahun" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="tahun_1">2024</SelectItem>
+                  <SelectItem value="tahun_1">2023</SelectItem>
                   <SelectItem value="tahun_2">2023</SelectItem>
                   <SelectItem value="tahun_3">2022</SelectItem>
                   <SelectItem value="tahun_4">2021</SelectItem>
@@ -290,7 +290,7 @@ const ManagePublish = () => {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-24 h-7">
+                <SelectTrigger className="w-24 h-7 border-[#00b7cc] text-[#00b7cc]">
                   <SelectValue placeholder="Bulan" />
                 </SelectTrigger>
                 <SelectContent>
@@ -310,7 +310,7 @@ const ManagePublish = () => {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-32 h-7">
+                <SelectTrigger className="w-32 h-7 border-[#00b7cc] text-[#00b7cc]">
                   <SelectValue placeholder="Semua WS" />
                 </SelectTrigger>
                 <SelectContent>
@@ -323,7 +323,7 @@ const ManagePublish = () => {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-32 h-7">
+                <SelectTrigger className="w-32 h-7 border-[#00b7cc] text-[#00b7cc]">
                   <SelectValue placeholder="Semua Source" />
                 </SelectTrigger>
                 <SelectContent>
@@ -335,7 +335,7 @@ const ManagePublish = () => {
 
               <AlertDialog>
                 <AlertDialogTrigger>
-                  <Button className="bg-[#1c60c7] hover:bg-[#4D93FD] w-[125px] h-7 rounded-md flex items-center justify-center">
+                  <Button className="bg-[#00527a] hover:bg-[#00527a] w-[125px] h-7 rounded-md flex items-center justify-center">
                     <div className="flex gap-2 items-center justify-center">
                       <img
                         src="/assets/publish-icon.png"
@@ -354,7 +354,7 @@ const ManagePublish = () => {
                       <Input
                         id="picture"
                         type="file"
-                        className="text-xs font-normal"
+                        className="text-xs font-normal border-[#00b7cc]"
                       />
                     </div>
                   </AlertDialogHeader>
@@ -372,7 +372,7 @@ const ManagePublish = () => {
         <div className="w-full">
           <div className="flex-grow">
             <Table>
-              <TableHeader className="bg-[#d9d9d9] text-sm font-medium text-[#949494] rounded-md">
+              <TableHeader className="bg-[#d4eff7] text-sm font-medium text-[#949494] rounded-md">
                 <TableRow>
                   <TableHead className="text-left">File Name</TableHead>
                   <TableHead className="text-left">Data</TableHead>
@@ -388,7 +388,7 @@ const ManagePublish = () => {
               <TableBody className="text-xs font-normal">
                 {geodatabases.map((database) => (
                   <TableRow key={database.file_name}>
-                    <TableCell className="text-[#162EFF]">
+                    <TableCell className="text-[#00527a]">
                       {database.file_name}
                     </TableCell>
                     <TableCell>{database.data}</TableCell>
@@ -409,12 +409,12 @@ const ManagePublish = () => {
       <div className="h-12 flex items-end justify-center">
         <div className="w-full">
           <div className="flex items-center justify-between">
-            <div className="text-xs font-normal">
+            <div className="text-xs font-normal text-[#00527a]">
               Showing 1 to 9 of 26 entries
             </div>
             <div className="text-xs font-normal">
               <Pagination className="text-xs font-normal">
-                <PaginationContent className="text-[#2272EA]">
+                <PaginationContent className="text-[#00b7cc]">
                   <PaginationItem>
                     <PaginationPrevious
                       href="#"
@@ -424,7 +424,7 @@ const ManagePublish = () => {
                   <PaginationItem>
                     <PaginationLink
                       href="#"
-                      className="text-xs text-white font-normal bg-[#2272EA] hover:bg-[#2272EA] hover:text-white h-7 w-7"
+                      className="text-xs text-white font-normal bg-[#00b7cc] hover:bg-[#00b7cc] hover:text-white h-7 w-7"
                     >
                       1
                     </PaginationLink>
