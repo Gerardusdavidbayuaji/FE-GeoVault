@@ -1,12 +1,11 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
 
-// import DashboardAdmin from "./pages/admin/dashboard-admin";
-import Login from "./pages/auth/login";
 import "./styles/index.css";
+import App from "./routes";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Login />
+    <App />
   </React.StrictMode>
 );
