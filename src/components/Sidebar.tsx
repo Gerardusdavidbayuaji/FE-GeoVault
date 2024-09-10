@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import DashboardActiveIcon from "/assets/dashboard-active-icon.png";
-import DashboardIcon from "/assets/dashboard-icon.png";
 import ManagedActiveIcon from "/assets/document-active-icon.png";
+import DashboardIcon from "/assets/dashboard-icon.png";
 import ManageIcon from "/assets/document-icon.png";
 import CloseIcon from "/assets/close-icon.png";
 
@@ -55,7 +56,9 @@ const Sidebar = ({
       </div>
 
       <div className="flex flex-col items-center justify-end cursor-pointer">
-        <img src={CloseIcon} alt="Close Icon" className="w-5 h-auto mb-4" />
+        <Link to="/">
+          <img src={CloseIcon} alt="Close Icon" className="w-5 h-auto mb-4" />
+        </Link>
       </div>
     </div>
   );

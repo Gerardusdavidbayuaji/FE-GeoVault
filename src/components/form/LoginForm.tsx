@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
@@ -22,6 +24,7 @@ const FormSchema = z.object({
 });
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -37,6 +40,9 @@ const LoginForm = () => {
   return (
     <Form {...form}>
       <h1 className="font-semibold text-center text-3xl">Login</h1>
+      <h4 className="text-center text-lg font-normal mt-3 mb-5">
+        Silakan login untuk mengelola data lokasi
+      </h4>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
         <div className="space-y-2">
           <FormField
@@ -78,19 +84,23 @@ const LoginForm = () => {
         <div className="justify-end">
           <Button
             type="submit"
-            className="rounded-lg w-full bg-[#00527a] hover:bg-[#00527a] mt-4"
+            className="rounded-lg w-full bg-[#00527a] hover:bg-[#00527a]/80 mt-4"
+            onClick={() => navigate("/dashboard")}
           >
             Login
           </Button>
           <Button
             type="submit"
-            className="rounded-lg w-full bg-[#00b7cc] hover:bg-[#00b7cc] mt-4"
+            className="rounded-lg w-full bg-[#00b7cc] hover:bg-[#00b7cc]/80 mt-4"
+            onClick={() => navigate("/dashboard")}
           >
             Guest User
           </Button>
-          <h4 className="mt-3 mb-5 text-center">
-            Belum memiliki akun? Silakan klik disini!
-          </h4>
+          <Link to="/register">
+            <h4 className="mt-3 mb-5 text-center text-sm font-medium hover:underline underline-offset-1">
+              Belum memiliki akun? Silakan klik disini!
+            </h4>
+          </Link>
         </div>
       </form>
     </Form>

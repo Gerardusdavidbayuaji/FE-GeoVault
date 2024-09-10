@@ -12,6 +12,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const FormSchema = z.object({
   username: z.string().min(1, "Username is required").max(30),
   email: z.string().min(1, "Email is required").email("Invalid email"),
@@ -22,6 +25,7 @@ const FormSchema = z.object({
 });
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -38,6 +42,9 @@ const RegisterForm = () => {
   return (
     <Form {...form}>
       <h1 className="font-semibold text-center text-3xl">Register</h1>
+      <h4 className="text-center text-lg font-normal mt-3 mb-5">
+        Silakan mengisi data terlebih dahulu
+      </h4>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
         <div className="space-y-2 mt-2">
           <FormField
@@ -90,14 +97,17 @@ const RegisterForm = () => {
         <div className="flex justify-end">
           <Button
             type="submit"
-            className="rounded-lg w-full bg-[#00527a] hover:bg-[#00527a] mt-4"
+            className="rounded-lg w-full bg-[#00527a] hover:bg-[#00527a]/80 mt-4"
+            onClick={() => navigate("/")}
           >
             Register
           </Button>
         </div>
-        <h4 className="mt-3 mb-5 text-center">
-          Sudah memiliki akun? Silakan klik disini!
-        </h4>
+        <Link to="/">
+          <h4 className="mt-3 mb-5 text-center text-sm font-medium hover:underline underline-offset-1">
+            Sudah memiliki akun? Silakan klik disini!
+          </h4>
+        </Link>
       </form>
     </Form>
   );

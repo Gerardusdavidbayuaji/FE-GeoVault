@@ -5,7 +5,7 @@ import DashAdmin from "@/components/DashAdmin";
 import Sidebar from "@/components/Sidebar";
 import Layout from "@/components/Layout";
 
-const DashboardAdmin = () => {
+const Dashboard = () => {
   const [showDashAdmin, setShowDashAdmin] = useState(true);
 
   const handleDashboardAdminClick = () => {
@@ -26,4 +26,4 @@ const DashboardAdmin = () => {
   );
 };
 
-export default DashboardAdmin;
+export default Dashboard;

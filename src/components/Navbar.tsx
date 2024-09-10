@@ -1,4 +1,5 @@
 import { LogOut, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import {
   DropdownMenu,
@@ -155,10 +156,12 @@ const Navbar = () => {
                     </DialogFooter>
                   </DialogContent>
                 </Dialog>
-                <div className="flex rounded-md hover:bg-[#bad7e8] gap-1 p-2 items-center justify-start text-xs cursor-pointer">
-                  <LogOut className="mr-2 h-4 w-4" />
-                  <span>Keluar</span>
-                </div>
+                <Link to="/">
+                  <div className="flex rounded-md hover:bg-[#bad7e8] gap-1 p-2 items-center justify-start text-xs cursor-pointer">
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Keluar</span>
+                  </div>
+                </Link>
               </DropdownMenuGroup>
             </DropdownMenuContent>
           </DropdownMenu>
