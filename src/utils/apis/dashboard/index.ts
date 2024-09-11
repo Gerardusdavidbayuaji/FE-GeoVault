@@ -1,5 +1,5 @@
-import { sampleData, filterData } from "./sampel-data";
+import { sampleDatas, filterData } from "./sampel-data";
 import { SampleData, FilterData } from "./types";
 
-export { sampleData, filterData };
+export { sampleDatas, filterData };
 export type { SampleData, FilterData };

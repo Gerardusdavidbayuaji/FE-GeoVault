@@ -1,7 +1,7 @@
 import { SampleData } from "./types";
 import { FilterData } from "./types";
 
-export const sampleData: SampleData[] = [
+export const sampleDatas: SampleData[] = [
   {
     data: [
       {
@@ -10,7 +10,7 @@ export const sampleData: SampleData[] = [
         normal: 1,
         siaga: 3,
         waspada: 2,
-        total_data: 9,
+        total_data: 8,
         datasets: [
           {
             feature_id: 1,
@@ -119,31 +119,16 @@ export const sampleData: SampleData[] = [
           },
           {
             feature_id: 8,
-            file_name: "curah_hujan_010324_050324",
-            type: "curah_hujan_010324_050324.zip",
+            file_name: "Genangan",
+            type: "Genangan.zip",
             download:
-              "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01032024_05032024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01032024_05032024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fpng",
+              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
+            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
             bbws: "BBWS Brantas",
-            ws: "WS Madura Bawean",
+            ws: "WS Bondoyudo Bedadung",
             source: "Rupa Bumi Indonesia",
-            date: "2024-03-01",
-            size: "10MB",
-            status_qc: "Diterima",
-            hasil_qc: "Update",
-          },
-          {
-            feature_id: 9,
-            file_name: "sungai",
-            type: "sungai.zip",
-            download:
-              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
-            bbws: "BBWS Brantas",
-            ws: "WS Brantas",
-            source: "Rupa Bumi Indonesia",
-            date: "2024-09-01",
-            size: "9MB",
+            date: "2024-07-20",
+            size: "14MB",
             status_qc: "Diterima",
             hasil_qc: "Update",
           },
@@ -151,11 +136,11 @@ export const sampleData: SampleData[] = [
       },
       {
         id: 2,
-        title: "Pos Duga Air (PDA)",
+        title: "Pos Curah Hujan (PCH)",
         normal: 1,
-        siaga: 3,
+        siaga: 1,
         waspada: 2,
-        total_data: 9,
+        total_data: 5,
         datasets: [
           {
             feature_id: 1,
@@ -219,61 +204,16 @@ export const sampleData: SampleData[] = [
           },
           {
             feature_id: 5,
-            file_name: "sawah",
-            type: "sawah.zip",
+            file_name: "Genangan",
+            type: "Genangan.zip",
             download:
-              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
+              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
+            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
             bbws: "BBWS Brantas",
             ws: "WS Brantas",
             source: "Rupa Bumi Indonesia",
-            date: "2024-07-20",
-            size: "14MB",
-            status_qc: "Diterima",
-            hasil_qc: "Update",
-          },
-          {
-            feature_id: 6,
-            file_name: "sungai",
-            type: "sungai.zip",
-            download:
-              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
-            bbws: "WS Madura Bawean",
-            ws: "WS Brantas",
-            source: "Rupa Bumi Indonesia",
-            date: "2024-09-01",
-            size: "9MB",
-            status_qc: "Diterima",
-            hasil_qc: "Update",
-          },
-          {
-            feature_id: 7,
-            file_name: "ladang",
-            type: "ladang.zip",
-            download:
-              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
-            bbws: "BBWS Brantas",
-            ws: "WS Brantas",
-            source: "Rupa Bumi Indonesia",
-            date: "2024-09-05",
-            size: "11MB",
-            status_qc: "Diterima",
-            hasil_qc: "Update",
-          },
-          {
-            feature_id: 8,
-            file_name: "irigasi",
-            type: "irigasi.zip",
-            download:
-              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
-            bbws: "BBWS Brantas",
-            ws: "WS Madura Bawean",
-            source: "Rupa Bumi Indonesia",
-            date: "2024-09-10",
-            size: "10MB",
+            date: "2024-07-18",
+            size: "15MB",
             status_qc: "Diterima",
             hasil_qc: "Update",
           },
@@ -281,11 +221,11 @@ export const sampleData: SampleData[] = [
       },
       {
         id: 3,
-        title: "Pos Duga Air (PDA)",
+        title: "ARR",
         normal: 1,
-        siaga: 3,
+        siaga: 2,
         waspada: 2,
-        total_data: 9,
+        total_data: 10,
         datasets: [
           {
             feature_id: 1,
@@ -422,15 +362,30 @@ export const sampleData: SampleData[] = [
             status_qc: "Diterima",
             hasil_qc: "Update",
           },
+          {
+            feature_id: 10,
+            file_name: "Genangan",
+            type: "Genangan.zip",
+            download:
+              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
+            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
+            bbws: "BBWS Brantas",
+            ws: "WS Madura Bawean",
+            source: "Rupa Bumi Indonesia",
+            date: "2024-09-01",
+            size: "9MB",
+            status_qc: "Diterima",
+            hasil_qc: "Update",
+          },
         ],
       },
       {
         id: 4,
-        title: "Pos Duga Air (PDA)",
+        title: "AWLR",
         normal: 1,
-        siaga: 3,
-        waspada: 2,
-        total_data: 9,
+        siaga: 1,
+        waspada: 1,
+        total_data: 12,
         datasets: [
           {
             feature_id: 1,
@@ -582,21 +537,53 @@ export const sampleData: SampleData[] = [
             status_qc: "Diterima",
             hasil_qc: "Update",
           },
+          {
+            feature_id: 11,
+            file_name: "genangan",
+            type: "genangan.zip",
+            download:
+              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
+            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
+            bbws: "BBWS Brantas",
+            ws: "WS Brantas",
+            source: "Rupa Bumi Indonesia",
+            date: "2024-09-10",
+            size: "10MB",
+            status_qc: "Diterima",
+            hasil_qc: "Update",
+          },
+          {
+            feature_id: 12,
+            file_name: "Penutupan Lahan",
+            type: "Penutupan Lahan.zip",
+            download:
+              "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
+            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
+            bbws: "BBWS Brantas",
+            ws: "WS Brantas",
+            source: "Rupa Bumi Indonesia",
+            date: "2024-09-10",
+            size: "10MB",
+            status_qc: "Diterima",
+            hasil_qc: "Update",
+          },
         ],
       },
     ],
-    all_data: {
-      curah_hujan: 4,
-      irigasi: 3,
-      jalan: 3,
-      ladang: 4,
-      pemanfaatan: 3,
-      pemukiman: 4,
-      perkebunan: 4,
-      sawah: 4,
-      sungai: 4,
-      toponim: 2,
-    },
+    all_data: [
+      { id: 1, jenis_data: "Curah Hujan", total_data: 4 },
+      { id: 2, jenis_data: "Irigasi", total_data: 3 },
+      { id: 3, jenis_data: "Jalan", total_data: 3 },
+      { id: 4, jenis_data: "Ladang", total_data: 4 },
+      { id: 5, jenis_data: "Pemanfaatan", total_data: 3 },
+      { id: 6, jenis_data: "Pemukiman", total_data: 4 },
+      { id: 7, jenis_data: "Perkebunan", total_data: 4 },
+      { id: 8, jenis_data: "Sawah", total_data: 4 },
+      { id: 9, jenis_data: "Sungai", total_data: 4 },
+      { id: 10, jenis_data: "Toponim", total_data: 2 },
+      { id: 10, jenis_data: "Genangan", total_data: 4 },
+      { id: 10, jenis_data: "Penutupan Lahan", total_data: 1 },
+    ],
   },
 ];
 
@@ -605,50 +592,62 @@ export const filterData: FilterData[] = [
     bulan: [
       {
         id: 1,
+        value: "bulan 1",
         month: "januari",
       },
       {
         id: 2,
+        value: "bulan 2",
         month: "februari",
       },
       {
         id: 3,
+        value: "bulan 3",
         month: "maret",
       },
       {
         id: 4,
+        value: "bulan 4",
         month: "april",
       },
       {
         id: 5,
+        value: "bulan 5",
         month: "mei",
       },
       {
         id: 6,
+        value: "bulan 6",
         month: "juni",
       },
       {
         id: 7,
+        value: "bulan 7",
         month: "juli",
       },
       {
         id: 8,
+        value: "bulan 8",
         month: "agustus",
       },
       {
         id: 9,
+        value: "bulan 9",
         month: "september",
       },
       {
         id: 10,
+        value: "bulan 10",
         month: "oktober",
       },
       {
         id: 11,
+        value: "bulan 11",
         month: "november",
       },
       {
         id: 12,
+        value: "bulan 12",
         month: "desember",
       },
     ],

@@ -13,17 +13,10 @@ interface Dataset {
   hasil_qc: string;
 }
 
-interface AllData {
-  curah_hujan: number;
-  irigasi: number;
-  jalan: number;
-  ladang: number;
-  pemanfaatan: number;
-  pemukiman: number;
-  perkebunan: number;
-  sawah: number;
-  sungai: number;
-  toponim: number;
+interface AllDataEntry {
+  id: number;
+  jenis_data: string;
+  total_data: number;
 }
 
 interface DataEntry {
@@ -38,11 +31,12 @@ interface DataEntry {
 
 export interface SampleData {
   data: DataEntry[];
-  all_data: AllData;
+  all_data: AllDataEntry[];
 }
 
 interface Month {
   id: number;
+  value: string;
   month: string;
 }
 

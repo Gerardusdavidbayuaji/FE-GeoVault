@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/select";
 
 type Props = {
+  id: number;
   title: string;
   value: string;
   description: string;
@@ -14,11 +15,11 @@ type Props = {
 };
 
 const CustomFormSelect = (props: Props) => {
-  const { title, value, description, triggerClassName } = props;
+  const { id, title, value, description, triggerClassName } = props;
 
   return (
     <Select>
-      <SelectTrigger className={triggerClassName ?? "w-24 h-7"}>
+      <SelectTrigger id={id} className={triggerClassName ?? "w-24 h-7"}>
         <SelectValue placeholder={title} />
       </SelectTrigger>
       <SelectContent>
