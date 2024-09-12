@@ -1,46 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+import { ChevronRight, ChevronDown } from "lucide-react";
+import { sampleDatas } from "@/utils/apis/dashboard";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
-import { ChevronDown } from "lucide-react";
-import FormMonthSelect from "./FormMonthSelect";
-
-import {
-  AlertDialogDescription,
-  AlertDialogTrigger,
-  AlertDialogContent,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialog,
-} from "@/components/ui/alert-dialog";
-import FormYearSelect from "./FormYearsSelect";
 import FormBalaiSelect from "./FormBalaiSelect";
+import FormMonthSelect from "./FormMonthSelect";
 import FormRiverSelect from "./FormRiverSelect";
+import FormYearSelect from "./FormYearsSelect";
+import Alert from "./AlertDialog";
 
 const Download = () => {
-  const [isExpandedPDA, setIsExpandedPDA] = useState(false);
-  const [isExpandedPCH, setIsExpandedPCH] = useState(false);
-  const [isExpandedARR, setIsExpandedARR] = useState(true);
-  const [isExpandedAWLR, setIsExpandedAWLR] = useState(false);
+  const [expandedIds, setExpandedIds] = useState<number[]>([]);
 
-  const handleTogglePDA = () => {
-    setIsExpandedPDA(!isExpandedPDA);
-  };
+  useEffect(() => {
+    if (sampleDatas[0].data.length >= 3) {
+      setExpandedIds([sampleDatas[0].data[2].id]); // Expand the 3rd item by default
+    }
+  }, []);
 
-  const handleTogglePCH = () => {
-    setIsExpandedPCH(!isExpandedPCH);
-  };
-
-  const handleToggleARR = () => {
-    setIsExpandedARR(!isExpandedARR);
-  };
-
-  const handleToggleAWLR = () => {
-    setIsExpandedAWLR(!isExpandedAWLR);
+  const handleTogglePDA = (id: number) => {
+    if (expandedIds.includes(id)) {
+      setExpandedIds(expandedIds.filter((expandedId) => expandedId !== id));
+    } else {
+      setExpandedIds([...expandedIds, id]);
+    }
   };
 
   return (
@@ -52,7 +35,6 @@ const Download = () => {
         <FormMonthSelect />
         <FormYearSelect />
       </div>
-
       <div className="my-2 space-y-2">
         <FormBalaiSelect />
         <FormRiverSelect />
@@ -60,311 +42,58 @@ const Download = () => {
 
       <div className="mb-2 space-y-2 flex-grow h-2 overflow-y-scroll p-2">
         <h4 className="font-bold text-xs mb-1">Pilih Data</h4>
-        <div className="space-y-2 cursor-pointer">
-          <div className="space-y-1">
+        {sampleDatas[0].data.map((dataEntry) => (
+          <div key={dataEntry.id} className="space-y-1">
             <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleTogglePDA}
+              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-50"
+              onClick={() => handleTogglePDA(dataEntry.id)}
             >
-              <h1 className="font-normal text-xs">Pos Duga Air (PDA)</h1>
-
-              {isExpandedPDA ? (
+              <h1 className="font-normal text-xs">{dataEntry.title}</h1>
+              {expandedIds.includes(dataEntry.id) ? (
                 <ChevronDown className="w-3 h-auto" />
               ) : (
                 <ChevronRight className="w-3 h-auto" />
               )}
             </div>
-            <div
-              className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
-                isExpandedPDA ? "max-h-40" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="danau" />
-                    <label htmlFor="danau" className="font-normal text-xs">
-                      Danau
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="bendungan" />
-                    <label htmlFor="bendungan" className="font-normal text-xs">
-                      Bendungan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="embung" />
-                    <label htmlFor="embung" className="font-normal text-xs">
-                      Embung
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="space-y-1">
-            <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleTogglePCH}
-            >
-              <h1 className="font-normal text-xs">Pos Curah Hujan (PCH)</h1>
 
-              {isExpandedPCH ? (
-                <ChevronDown className="w-3 h-auto" />
-              ) : (
-                <ChevronRight className="w-3 h-auto" />
-              )}
-            </div>
-            <div
-              className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
-                isExpandedPCH ? "max-h-40" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="curah_hujan" />
-                    <label
-                      htmlFor="curah_hujan"
-                      className="font-normal text-xs"
-                    >
-                      Curah Hujan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="fase_tanam" />
-                    <label htmlFor="fase_tanam" className="font-normal text-xs">
-                      Fase Tanam
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_banjir" />
-                    <label
-                      htmlFor="genangan_banjir"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Banjir
-                    </label>
-                  </div>
-                </li>
+            {expandedIds.includes(dataEntry.id) && (
+              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1 transition-max-height duration-500 ease-in-out overflow-hidden">
+                {dataEntry.datasets.map((dataset) => (
+                  <li
+                    key={dataset.feature_id}
+                    className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id={dataset.file_name} />
+                      <label
+                        htmlFor={dataset.file_name}
+                        className="font-normal text-xs"
+                      >
+                        {dataset.file_name}
+                      </label>
+                    </div>
+                  </li>
+                ))}
               </ul>
-            </div>
+            )}
           </div>
-          <div className="space-y-1">
-            <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleToggleARR}
-            >
-              <h1 className="font-normal text-xs">ARR</h1>
-
-              {isExpandedARR ? (
-                <ChevronDown className="w-3 h-auto" />
-              ) : (
-                <ChevronRight className="w-3 h-auto" />
-              )}
-            </div>
-            <div
-              className={`transition-max-height duration-300 ease-in-out delay-200 overflow-hidden ${
-                isExpandedARR ? "max-h-screen" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="curah_hujan" />
-                    <label
-                      htmlFor="curah_hujan"
-                      className="font-normal text-xs"
-                    >
-                      Curah Hujan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="fase_tanam" />
-                    <label htmlFor="fase_tanam" className="font-normal text-xs">
-                      Fase Tanam
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_banjir" />
-                    <label
-                      htmlFor="genangan_banjir"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Banjir
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_rob" />
-                    <label
-                      htmlFor="genangan_rob"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Rob
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="history_banjir" />
-                    <label
-                      htmlFor="history_banjir"
-                      className="font-normal text-xs"
-                    >
-                      History Banjir
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="penggunaan_lahan" />
-                    <label
-                      htmlFor="penggunaan_lahan"
-                      className="font-normal text-xs"
-                    >
-                      Penggunaan Lahan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="tutupan_lahan" />
-                    <label
-                      htmlFor="tutupan_lahan"
-                      className="font-normal text-xs"
-                    >
-                      Tutupan Lahan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="sempadan_pantai" />
-                    <label
-                      htmlFor="sempadan_pantai"
-                      className="font-normal text-xs"
-                    >
-                      Sempadan Pantai
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="sempadan_danau" />
-                    <label
-                      htmlFor="sempadan_danau"
-                      className="font-normal text-xs"
-                    >
-                      Sempadan Danau
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="space-y-1">
-            <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleToggleAWLR}
-            >
-              <h1 className="font-normal text-xs">AWLR</h1>
-
-              {isExpandedAWLR ? (
-                <ChevronDown className="w-3 h-auto" />
-              ) : (
-                <ChevronRight className="w-3 h-auto" />
-              )}
-            </div>
-            <div
-              className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
-                isExpandedAWLR ? "max-h-40" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="curah_hujan" />
-                    <label
-                      htmlFor="curah_hujan"
-                      className="font-normal text-xs"
-                    >
-                      Curah Hujan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="fase_tanam" />
-                    <label htmlFor="fase_tanam" className="font-normal text-xs">
-                      Fase Tanam
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_banjir" />
-                    <label
-                      htmlFor="genangan_banjir"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Banjir
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-      <AlertDialog>
-        <AlertDialogTrigger>
-          <Button className="bg-[#00527a] hover:bg-[#00527a] w-full rounded-md">
-            <div className="flex gap-2 items-center justify-center">
-              <img src="/assets/download-icon.png" className="w-6 h-auto" />
-              <p className="font-normal text-sm text-white">Download</p>
-            </div>
-          </Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Apakah Anda yakin?</AlertDialogTitle>
-            <div>
-              <div className="flex items-center space-x-2">
-                <Checkbox id="terms2" disabled />
-                <label
-                  htmlFor="terms2"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Bendungan.zip
-                </label>
-              </div>
-            </div>
-            <AlertDialogDescription>
-              Ini akan mengunduh data dan menyimpan salinannya di perangkat
-              Anda.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Batal</AlertDialogCancel>
-            <AlertDialogAction>Download</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <Alert
+        title="Apakah Anda yakin?"
+        description="Ini akan mengunduh data dan menyimpan salinannya di perangkat
+        Anda."
+        onAction={() => {
+          console.log("Downloading...");
+        }}
+        onActionTitle="Download"
+        style="bg-[#00527a] hover:bg-[#00527a]/80 w-full h-10 rounded-md"
+      >
+        <div className="flex gap-2 items-center justify-center">
+          <img src="/assets/download-icon.png" className="w-6 h-auto" />
+          <p className="font-normal text-sm text-white">Download</p>
+        </div>
+      </Alert>
     </div>
   );
 };
