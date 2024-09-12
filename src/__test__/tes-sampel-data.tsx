@@ -135,237 +135,237 @@ export const sampleDatas: SampleData[] = [
   },
 ];
 
-export const filterData: FilterData[] = [
-  {
-    bulan: [
-      {
-        id: 1,
-        month: "januari",
-      },
-      {
-        id: 2,
-        month: "februari",
-      },
-      {
-        id: 3,
-        month: "maret",
-      },
-      {
-        id: 4,
-        month: "april",
-      },
-      {
-        id: 5,
-        month: "mei",
-      },
-      {
-        id: 6,
-        month: "juni",
-      },
-      {
-        id: 7,
-        month: "juli",
-      },
-      {
-        id: 8,
-        month: "agustus",
-      },
-      {
-        id: 9,
-        month: "september",
-      },
-      {
-        id: 10,
-        month: "oktober",
-      },
-      {
-        id: 11,
-        month: "november",
-      },
-      {
-        id: 12,
-        month: "desember",
-      },
-    ],
-    tahun: [
-      {
-        id: 1,
-        year: 2020,
-      },
-      {
-        id: 2,
-        year: 2021,
-      },
-      {
-        id: 3,
-        year: 2022,
-      },
-      {
-        id: 4,
-        year: 2023,
-      },
-      {
-        id: 5,
-        year: 2024,
-      },
-    ],
-    wilayah_sungai: [
-      {
-        id: 1,
-        ws: "WS Bondoyudo Bedadung",
-      },
-      {
-        id: 2,
-        ws: "WS Brantas",
-      },
-      {
-        id: 3,
-        ws: "WS Cidanau Ciujung Cidurian",
-      },
-      {
-        id: 4,
-        ws: "WS Ciliwung Cisadane",
-      },
-      {
-        id: 5,
-        ws: "WS Cimanuk Cisanggarung",
-      },
-      {
-        id: 6,
-        ws: "WS Ciwulan Cilaki",
-      },
-      {
-        id: 7,
-        ws: "WS Citanduy",
-      },
-      {
-        id: 8,
-        ws: "WS Citarum",
-      },
-      {
-        id: 9,
-        ws: "WS Jratunseluna",
-      },
-      {
-        id: 10,
-        ws: "WS Pemali Comal",
-      },
-      {
-        id: 11,
-        ws: "WS Serayu Bogowonto",
-      },
-      {
-        id: 12,
-        ws: "WS Progo Opak Serang",
-      },
-    ],
-    bbws: [
-      {
-        id: 1,
-        bbws: "BBWS Brantas",
-      },
-      {
-        id: 2,
-        bbws: "BBWS Cidanau Ciujung Cidurian",
-      },
-      {
-        id: 3,
-        bbws: "BBWS Ciliwung Cisadane",
-      },
-      {
-        id: 4,
-        bbws: "BBWS Cimanuk Cisanggarung",
-      },
-      {
-        id: 5,
-        bbws: "BBWS Citanduy",
-      },
-      {
-        id: 6,
-        bbws: "BBWS Citarum",
-      },
-      {
-        id: 7,
-        bbws: "BBWS Pemali Juana",
-      },
-      {
-        id: 8,
-        bbws: "BBWS Serayu Opak",
-      },
-    ],
-    source: [
-      {
-        id: 1,
-        data_source: "balai",
-      },
-      {
-        id: 2,
-        data_source: "BMKG",
-      },
-      {
-        id: 3,
-        data_source: "Pusat",
-      },
-      {
-        id: 4,
-        data_source: "Rupa Bumi Indonesia",
-      },
-    ],
-    all_data: [
-      {
-        id: 1,
-        data_spasial: "curah hujan",
-      },
-      {
-        id: 2,
-        data_spasial: "irigasi",
-      },
-      {
-        id: 3,
-        data_spasial: "jalan",
-      },
-      {
-        id: 4,
-        data_spasial: "ladang",
-      },
-      {
-        id: 5,
-        data_spasial: "pemanfaatan",
-      },
-      {
-        id: 6,
-        data_spasial: "pemukiman",
-      },
-      {
-        id: 7,
-        data_spasial: "perkebunan",
-      },
-      {
-        id: 8,
-        data_spasial: "sawah",
-      },
-      {
-        id: 9,
-        data_spasial: "sungai",
-      },
-      {
-        id: 10,
-        data_spasial: "toponim",
-      },
-    ],
-    basemap: [
-      {
-        id: 1,
-        jenis: "Satellite",
-        layer_basemap:
-          "https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=AW8IuG306IIk8kNdxEw6",
-      },
-      {
-        id: 2,
-        jenis: "Open Street Map",
-        layer_basemap:
-          "ihttps://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}@2x.png?key=AW8IuG306IIk8kNdxEw6",
-      },
-    ],
-  },
-];
+// export const filterData: FilterData[] = [
+//   {
+//     bulan: [
+//       {
+//         id: 1,
+//         month: "januari",
+//       },
+//       {
+//         id: 2,
+//         month: "februari",
+//       },
+//       {
+//         id: 3,
+//         month: "maret",
+//       },
+//       {
+//         id: 4,
+//         month: "april",
+//       },
+//       {
+//         id: 5,
+//         month: "mei",
+//       },
+//       {
+//         id: 6,
+//         month: "juni",
+//       },
+//       {
+//         id: 7,
+//         month: "juli",
+//       },
+//       {
+//         id: 8,
+//         month: "agustus",
+//       },
+//       {
+//         id: 9,
+//         month: "september",
+//       },
+//       {
+//         id: 10,
+//         month: "oktober",
+//       },
+//       {
+//         id: 11,
+//         month: "november",
+//       },
+//       {
+//         id: 12,
+//         month: "desember",
+//       },
+//     ],
+//     tahun: [
+//       {
+//         id: 1,
+//         year: 2020,
+//       },
+//       {
+//         id: 2,
+//         year: 2021,
+//       },
+//       {
+//         id: 3,
+//         year: 2022,
+//       },
+//       {
+//         id: 4,
+//         year: 2023,
+//       },
+//       {
+//         id: 5,
+//         year: 2024,
+//       },
+//     ],
+//     wilayah_sungai: [
+//       {
+//         id: 1,
+//         ws: "WS Bondoyudo Bedadung",
+//       },
+//       {
+//         id: 2,
+//         ws: "WS Brantas",
+//       },
+//       {
+//         id: 3,
+//         ws: "WS Cidanau Ciujung Cidurian",
+//       },
+//       {
+//         id: 4,
+//         ws: "WS Ciliwung Cisadane",
+//       },
+//       {
+//         id: 5,
+//         ws: "WS Cimanuk Cisanggarung",
+//       },
+//       {
+//         id: 6,
+//         ws: "WS Ciwulan Cilaki",
+//       },
+//       {
+//         id: 7,
+//         ws: "WS Citanduy",
+//       },
+//       {
+//         id: 8,
+//         ws: "WS Citarum",
+//       },
+//       {
+//         id: 9,
+//         ws: "WS Jratunseluna",
+//       },
+//       {
+//         id: 10,
+//         ws: "WS Pemali Comal",
+//       },
+//       {
+//         id: 11,
+//         ws: "WS Serayu Bogowonto",
+//       },
+//       {
+//         id: 12,
+//         ws: "WS Progo Opak Serang",
+//       },
+//     ],
+//     bbws: [
+//       {
+//         id: 1,
+//         bbws: "BBWS Brantas",
+//       },
+//       {
+//         id: 2,
+//         bbws: "BBWS Cidanau Ciujung Cidurian",
+//       },
+//       {
+//         id: 3,
+//         bbws: "BBWS Ciliwung Cisadane",
+//       },
+//       {
+//         id: 4,
+//         bbws: "BBWS Cimanuk Cisanggarung",
+//       },
+//       {
+//         id: 5,
+//         bbws: "BBWS Citanduy",
+//       },
+//       {
+//         id: 6,
+//         bbws: "BBWS Citarum",
+//       },
+//       {
+//         id: 7,
+//         bbws: "BBWS Pemali Juana",
+//       },
+//       {
+//         id: 8,
+//         bbws: "BBWS Serayu Opak",
+//       },
+//     ],
+//     source: [
+//       {
+//         id: 1,
+//         data_source: "balai",
+//       },
+//       {
+//         id: 2,
+//         data_source: "BMKG",
+//       },
+//       {
+//         id: 3,
+//         data_source: "Pusat",
+//       },
+//       {
+//         id: 4,
+//         data_source: "Rupa Bumi Indonesia",
+//       },
+//     ],
+//     all_data: [
+//       {
+//         id: 1,
+//         data_spasial: "curah hujan",
+//       },
+//       {
+//         id: 2,
+//         data_spasial: "irigasi",
+//       },
+//       {
+//         id: 3,
+//         data_spasial: "jalan",
+//       },
+//       {
+//         id: 4,
+//         data_spasial: "ladang",
+//       },
+//       {
+//         id: 5,
+//         data_spasial: "pemanfaatan",
+//       },
+//       {
+//         id: 6,
+//         data_spasial: "pemukiman",
+//       },
+//       {
+//         id: 7,
+//         data_spasial: "perkebunan",
+//       },
+//       {
+//         id: 8,
+//         data_spasial: "sawah",
+//       },
+//       {
+//         id: 9,
+//         data_spasial: "sungai",
+//       },
+//       {
+//         id: 10,
+//         data_spasial: "toponim",
+//       },
+//     ],
+//     basemap: [
+//       {
+//         id: 1,
+//         jenis: "Satellite",
+//         layer_basemap:
+//           "https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=AW8IuG306IIk8kNdxEw6",
+//       },
+//       {
+//         id: 2,
+//         jenis: "Open Street Map",
+//         layer_basemap:
+//           "ihttps://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}@2x.png?key=AW8IuG306IIk8kNdxEw6",
+//       },
+//     ],
+//   },
+// ];
