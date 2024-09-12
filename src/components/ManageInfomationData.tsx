@@ -1,14 +1,6 @@
 import { Button } from "@/components/ui/button";
 
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
-import {
   Dialog,
   DialogContent,
   DialogFooter,
@@ -27,16 +19,13 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
-import CustomFormSelect from "./CustomFormSelect";
+import FormBalaiSelect from "./FormBalaiSelect";
+import FormDataSelect from "./FormDataSelect";
+import FormMonthSelect from "./FormMonthSelect";
+import FormRiverSelect from "./FormRiverSelect";
+import FormSourceSelect from "./FormSourceSelect";
+import FormYearSelect from "./FormYearsSelect";
+import Pagination from "./Pagination";
 
 const geodatabases = [
   {
@@ -168,91 +157,14 @@ const ManageInformationData = () => {
                     <DialogTitle className="text-[#00527a]">Filter</DialogTitle>
                   </DialogHeader>
                   <div className="grid grid-cols-2 gap-2">
-                    <Select>
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="Januari" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="bulan_2">Februari</SelectItem>
-                        <SelectItem value="bulan_3">Maret</SelectItem>
-                        <SelectItem value="bulan_4">April</SelectItem>
-                        <SelectItem value="bulan_5">Mei</SelectItem>
-                        <SelectItem value="bulan_6">Juni</SelectItem>
-                        <SelectItem value="bulan_7">Juli</SelectItem>
-                        <SelectItem value="bulan_8">Agustus</SelectItem>
-                        <SelectItem value="bulan_9">September</SelectItem>
-                        <SelectItem value="bulan_10">Oktober</SelectItem>
-                        <SelectItem value="bulan_11">November</SelectItem>
-                        <SelectItem value="bulan_12">Desember</SelectItem>
-                      </SelectContent>
-                    </Select>
-
-                    <Select>
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="2024" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="tahun_2">2023</SelectItem>
-                        <SelectItem value="tahun_3">2022</SelectItem>
-                        <SelectItem value="tahun_4">2021</SelectItem>
-                        <SelectItem value="tahun_5">2020</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <FormMonthSelect />
+                    <FormYearSelect />
                   </div>
-                  <Select>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Semua B/BWS" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="bbws_2">
-                        BBWS Mesuji Sekampung
-                      </SelectItem>
-                      <SelectItem value="bbws_3">
-                        BBWS Mesuji Ciliwung Cisadane
-                      </SelectItem>
-                      <SelectItem value="bbws_4">
-                        BBWS Mesuji Citanduy
-                      </SelectItem>
-                      <SelectItem value="bbws_5">
-                        BBWS Mesuji Serayu Opak
-                      </SelectItem>
-                      <SelectItem value="bbws_6">BBWS Pemali Juana</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <Select>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Semua WS" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="sungai_2">Bogowonto</SelectItem>
-                      <SelectItem value="sungai_3">Jratunseluna</SelectItem>
-                      <SelectItem value="sungai_4">Progo</SelectItem>
-                      <SelectItem value="sungai_5">Opak</SelectItem>
-                      <SelectItem value="sungai_6">Serayu</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <Select>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Semua Data" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="data_2">Batas Desa</SelectItem>
-                      <SelectItem value="data_3">Batas Kecamatan</SelectItem>
-                      <SelectItem value="data_4">Batas Kabupaten</SelectItem>
-                      <SelectItem value="data_5">Titik Banjir</SelectItem>
-                      <SelectItem value="data_6">Genangan Banjir</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <Select>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Semua Source" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="source_2">Balai</SelectItem>
-                      <SelectItem value="source_3">BMKG</SelectItem>
-                      <SelectItem value="source_4">Pusat</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <FormBalaiSelect />
+                  <FormRiverSelect />
+                  <FormDataSelect />
+                  <FormSourceSelect />
+
                   <DialogFooter>
                     <Button className="bg-white outline outline-[1px] outline-[#00b7cc] text-[#00b7cc] hover:bg-white text-sm font-normal">
                       Reset
@@ -266,55 +178,10 @@ const ManageInformationData = () => {
             </div>
 
             <div className="flex gap-1">
-              <CustomFormSelect
-                title="Tahun"
-                value="tahun_1"
-                description="Januari"
-              />
-
-              <Select>
-                <SelectTrigger className="w-24 h-7">
-                  <SelectValue placeholder="Bulan" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="bulan_1">Januari</SelectItem>
-                  <SelectItem value="bulan_2">Februari</SelectItem>
-                  <SelectItem value="bulan_3">Maret</SelectItem>
-                  <SelectItem value="bulan_4">April</SelectItem>
-                  <SelectItem value="bulan_5">Mei</SelectItem>
-                  <SelectItem value="bulan_6">Juni</SelectItem>
-                  <SelectItem value="bulan_7">Juli</SelectItem>
-                  <SelectItem value="bulan_8">Agustus</SelectItem>
-                  <SelectItem value="bulan_9">September</SelectItem>
-                  <SelectItem value="bulan_10">Oktober</SelectItem>
-                  <SelectItem value="bulan_11">November</SelectItem>
-                  <SelectItem value="bulan_12">Desember</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select>
-                <SelectTrigger className="w-32 h-7">
-                  <SelectValue placeholder="Semua WS" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="sungai_1">Serayu</SelectItem>
-                  <SelectItem value="sungai_2">Bogowonto</SelectItem>
-                  <SelectItem value="sungai_3">Jratunseluna</SelectItem>
-                  <SelectItem value="sungai_4">Progo</SelectItem>
-                  <SelectItem value="sungai_5">Opak</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select>
-                <SelectTrigger className="w-32 h-7">
-                  <SelectValue placeholder="Semua Source" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="source_2">Balai</SelectItem>
-                  <SelectItem value="source_3">BMKG</SelectItem>
-                  <SelectItem value="source_4">Pusat</SelectItem>
-                </SelectContent>
-              </Select>
+              <FormYearSelect />
+              <FormMonthSelect />
+              <FormRiverSelect />
+              <FormSourceSelect />
             </div>
           </div>
         </div>
@@ -358,42 +225,7 @@ const ManageInformationData = () => {
         </div>
       </div>
       <div className="h-12 flex items-end justify-center">
-        <div className="w-full">
-          <div className="flex items-center justify-between">
-            <div className="text-xs font-normal text-[#00527a]">
-              Showing 1 to 9 of 26 entries
-            </div>
-            <div className="text-xs font-normal">
-              <Pagination className="text-xs font-normal">
-                <PaginationContent className="text-[#00527a]">
-                  <PaginationItem>
-                    <PaginationPrevious
-                      href="#"
-                      className="text-xs font-normal h-7 w-auto"
-                    />
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationLink
-                      href="#"
-                      className="text-xs text-white font-normal bg-[#00527a] hover:bg-[#00527a] hover:text-white h-7 w-7"
-                    >
-                      1
-                    </PaginationLink>
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationEllipsis className="text-xs font-normal" />
-                  </PaginationItem>
-                  <PaginationItem>
-                    <PaginationNext
-                      href="#"
-                      className="text-xs font-normal h-7 w-auto"
-                    />
-                  </PaginationItem>
-                </PaginationContent>
-              </Pagination>
-            </div>
-          </div>
-        </div>
+        <Pagination />
       </div>
     </div>
   );

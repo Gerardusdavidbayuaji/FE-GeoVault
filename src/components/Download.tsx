@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import { Checkbox } from "@/components/ui/checkbox";
-import CustomFormSelect from "./CustomFormSelect";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { ChevronDown } from "lucide-react";
+import FormMonthSelect from "./FormMonthSelect";
 
 import {
   AlertDialogDescription,
@@ -17,6 +17,9 @@ import {
   AlertDialogTitle,
   AlertDialog,
 } from "@/components/ui/alert-dialog";
+import FormYearSelect from "./FormYearsSelect";
+import FormBalaiSelect from "./FormBalaiSelect";
+import FormRiverSelect from "./FormRiverSelect";
 
 const Download = () => {
   const [isExpandedPDA, setIsExpandedPDA] = useState(false);
@@ -46,33 +49,13 @@ const Download = () => {
         Data GIS
       </h3>
       <div className="grid grid-cols-2 gap-2">
-        <CustomFormSelect
-          title="Bulan"
-          value="Bulan_1"
-          description="Januari"
-          triggerClassName="w-full h-7"
-        />
-        <CustomFormSelect
-          title="Tahun"
-          value="Tahun_1"
-          description="2024"
-          triggerClassName="w-full h-7"
-        />
+        <FormMonthSelect />
+        <FormYearSelect />
       </div>
 
       <div className="my-2 space-y-2">
-        <CustomFormSelect
-          title="BBWS"
-          value="bbws_1"
-          description="BBWS Mesuji Serayu Opak"
-          triggerClassName="w-full h-7"
-        />
-        <CustomFormSelect
-          title="Sungai"
-          value="sungai_1"
-          description="Serayu"
-          triggerClassName="w-full h-7"
-        />
+        <FormBalaiSelect />
+        <FormRiverSelect />
       </div>
 
       <div className="mb-2 space-y-2 flex-grow h-2 overflow-y-scroll p-2">
