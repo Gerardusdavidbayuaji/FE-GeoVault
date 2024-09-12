@@ -14,8 +14,8 @@ export const sampleDatas: SampleData[] = [
         datasets: [
           {
             feature_id: 1,
-            file_name: "irigasi",
-            type: "irigasi.zip",
+            file_name: "Irigasi",
+            type: "Irigasi.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -29,8 +29,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 2,
-            file_name: "jalan",
-            type: "jalan.zip",
+            file_name: "Jalan",
+            type: "Jalan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_jalan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_jalan&bbox=112.56944605229353%2C-8.050958581073587%2C112.69341873668537%2C-7.910836884914275&width=679&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -44,8 +44,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 3,
-            file_name: "ladang",
-            type: "ladang.zip",
+            file_name: "Ladang",
+            type: "Ladang.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -59,8 +59,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 4,
-            file_name: "pemanfaatan",
-            type: "pemanfaatan.zip",
+            file_name: "Pemanfaatan",
+            type: "Pemanfaatan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -74,8 +74,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 5,
-            file_name: "pemukiman",
-            type: "pemukiman.zip",
+            file_name: "Pemukiman",
+            type: "Pemukiman.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -89,8 +89,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 6,
-            file_name: "perkebunan",
-            type: "perkebunan.zip",
+            file_name: "Perkebunan",
+            type: "Perkebunan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -104,8 +104,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 7,
-            file_name: "sawah",
-            type: "sawah.zip",
+            file_name: "Sawah",
+            type: "Sawah.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -144,8 +144,8 @@ export const sampleDatas: SampleData[] = [
         datasets: [
           {
             feature_id: 1,
-            file_name: "pemanfaatan",
-            type: "pemanfaatan.zip",
+            file_name: "Pemanfaatan",
+            type: "Pemanfaatan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -159,8 +159,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 2,
-            file_name: "curah_hujan_010424_050424",
-            type: "curah_hujan_010424_050424.zip",
+            file_name: "Curah Hujan",
+            type: "Curah Hujan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -174,8 +174,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 3,
-            file_name: "pemukiman",
-            type: "pemukiman.zip",
+            file_name: "Pemukiman",
+            type: "Pemukiman.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -189,8 +189,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 4,
-            file_name: "perkebunan",
-            type: "perkebunan.zip",
+            file_name: "Perkebunan",
+            type: "Perkebunan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -225,12 +225,12 @@ export const sampleDatas: SampleData[] = [
         normal: 1,
         siaga: 2,
         waspada: 2,
-        total_data: 10,
+        total_data: 9,
         datasets: [
           {
             feature_id: 1,
-            file_name: "ladang",
-            type: "ladang.zip",
+            file_name: "Ladang",
+            type: "Ladang.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -244,8 +244,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 2,
-            file_name: "pemukiman",
-            type: "pemukiman.zip",
+            file_name: "Pemukiman",
+            type: "Pemukiman.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -259,23 +259,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 3,
-            file_name: "curah_hujan_010424_050424",
-            type: "curah_hujan_010424_050424.zip",
-            download:
-              "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fpng",
-            bbws: "BBWS Brantas",
-            ws: "WS Madura Bawean",
-            source: "Rupa Bumi Indonesia",
-            date: "2024-04-01",
-            size: "10MB",
-            status_qc: "Diterima",
-            hasil_qc: "Update",
-          },
-          {
-            feature_id: 4,
-            file_name: "toponim",
-            type: "toponim.zip",
+            file_name: "Toponim",
+            type: "Toponim.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_toponim&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_toponim&bbox=112.57526072600001%2C-8.048571480999954%2C112.68837819200007%2C-7.912429802999952&width=638&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -288,9 +273,9 @@ export const sampleDatas: SampleData[] = [
             hasil_qc: "Update",
           },
           {
-            feature_id: 5,
-            file_name: "jalan",
-            type: "jalan.zip",
+            feature_id: 4,
+            file_name: "Jalan",
+            type: "Jalan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_jalan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_jalan&bbox=112.56944605229353%2C-8.050958581073587%2C112.69341873668537%2C-7.910836884914275&width=679&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -303,9 +288,9 @@ export const sampleDatas: SampleData[] = [
             hasil_qc: "Update",
           },
           {
-            feature_id: 6,
-            file_name: "perkebunan",
-            type: "perkebunan.zip",
+            feature_id: 5,
+            file_name: "Perkebunan",
+            type: "Perkebunan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -318,9 +303,9 @@ export const sampleDatas: SampleData[] = [
             hasil_qc: "Update",
           },
           {
-            feature_id: 7,
-            file_name: "sawah",
-            type: "sawah.zip",
+            feature_id: 6,
+            file_name: "Sawah",
+            type: "Sawah.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -333,9 +318,9 @@ export const sampleDatas: SampleData[] = [
             hasil_qc: "Update",
           },
           {
-            feature_id: 8,
-            file_name: "pemanfaatan",
-            type: "pemanfaatan.zip",
+            feature_id: 7,
+            file_name: "Pemanfaatan",
+            type: "Pemanfaatan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -348,9 +333,9 @@ export const sampleDatas: SampleData[] = [
             hasil_qc: "Update",
           },
           {
-            feature_id: 9,
-            file_name: "sungai",
-            type: "sungai.zip",
+            feature_id: 8,
+            file_name: "Sungai",
+            type: "Sungai.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -363,7 +348,7 @@ export const sampleDatas: SampleData[] = [
             hasil_qc: "Update",
           },
           {
-            feature_id: 10,
+            feature_id: 9,
             file_name: "Genangan",
             type: "Genangan.zip",
             download:
@@ -389,8 +374,8 @@ export const sampleDatas: SampleData[] = [
         datasets: [
           {
             feature_id: 1,
-            file_name: "curah_hujan_010424_050424",
-            type: "curah_hujan_010424_050424.zip",
+            file_name: "Curah Hujan",
+            type: "Curah Hujan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan_01022024_05022024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan_01022024_05022024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -404,8 +389,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 2,
-            file_name: "ladang",
-            type: "ladang.zip",
+            file_name: "Ladang",
+            type: "Ladang.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -419,8 +404,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 3,
-            file_name: "pemukiman",
-            type: "pemukiman.zip",
+            file_name: "Pemukiman",
+            type: "Pemukiman.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -434,8 +419,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 4,
-            file_name: "toponim",
-            type: "toponim.zip",
+            file_name: "Toponim",
+            type: "Toponim.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_toponim&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_toponim&bbox=112.57526072600001%2C-8.048571480999954%2C112.68837819200007%2C-7.912429802999952&width=638&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -449,8 +434,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 5,
-            file_name: "jalan",
-            type: "jalan.zip",
+            file_name: "Jalan",
+            type: "Jalan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_jalan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_jalan&bbox=112.56944605229353%2C-8.050958581073587%2C112.69341873668537%2C-7.910836884914275&width=679&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -464,8 +449,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 6,
-            file_name: "sawah",
-            type: "sawah.zip",
+            file_name: "Sawah",
+            type: "Sawah.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -479,8 +464,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 7,
-            file_name: "pemanfaatan",
-            type: "pemanfaatan.zip",
+            file_name: "Pemanfaatan",
+            type: "Pemanfaatan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -494,8 +479,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 8,
-            file_name: "perkebunan",
-            type: "perkebunan.zip",
+            file_name: "Perkebunan",
+            type: "Perkebunan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -509,8 +494,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 9,
-            file_name: "sungai",
-            type: "sungai.zip",
+            file_name: "Sungai",
+            type: "Sungai.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -524,8 +509,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 10,
-            file_name: "irigasi",
-            type: "irigasi.zip",
+            file_name: "Irigasi",
+            type: "Irigasi.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
@@ -539,8 +524,8 @@ export const sampleDatas: SampleData[] = [
           },
           {
             feature_id: 11,
-            file_name: "genangan",
-            type: "genangan.zip",
+            file_name: "Genangan",
+            type: "Genangan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
             wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",

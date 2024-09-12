@@ -4,6 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { ChevronDown } from "lucide-react";
+import FormMonthSelect from "./FormMonthSelect";
 
 import {
   AlertDialogDescription,
@@ -19,9 +20,6 @@ import {
 import FormYearSelect from "./FormYearsSelect";
 import FormBalaiSelect from "./FormBalaiSelect";
 import FormRiverSelect from "./FormRiverSelect";
-import FormMonthSelect from "./FormMonthSelect";
-import { sampleDatas } from "@/utils/apis/dashboard";
-import { SampleData } from "@/utils/apis/dashboard";
 
 const Download = () => {
   const [isExpandedPDA, setIsExpandedPDA] = useState(false);
@@ -76,33 +74,38 @@ const Download = () => {
                 <ChevronRight className="w-3 h-auto" />
               )}
             </div>
-            {sampleDatas.data.map((dataEntry) => (
-              <div
-                className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
-                  isExpandedPDA ? "max-h-40" : "max-h-0"
-                }`}
-                key={dataEntry.feature_id}
-              >
-                <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                  {dataEntry.datasets.map((dataset) => {
-                    const { feature_id, file_name } = dataset;
-                    return (
-                      <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                        <div className="flex items-center space-x-2">
-                          <Checkbox id={feature_id} />
-                          <label
-                            htmlFor={file_name}
-                            className="font-normal text-xs"
-                          >
-                            {file_name}
-                          </label>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
+            <div
+              className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
+                isExpandedPDA ? "max-h-40" : "max-h-0"
+              }`}
+            >
+              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
+                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="danau" />
+                    <label htmlFor="danau" className="font-normal text-xs">
+                      Danau
+                    </label>
+                  </div>
+                </li>
+                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="bendungan" />
+                    <label htmlFor="bendungan" className="font-normal text-xs">
+                      Bendungan
+                    </label>
+                  </div>
+                </li>
+                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="embung" />
+                    <label htmlFor="embung" className="font-normal text-xs">
+                      Embung
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="space-y-1">
             <div
