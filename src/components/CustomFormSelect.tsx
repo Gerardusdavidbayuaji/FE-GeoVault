@@ -15,11 +15,11 @@ type Props = {
 };
 
 const CustomFormSelect = (props: Props) => {
-  const { id, title, value, description, triggerClassName } = props;
+  const { title, value, description, triggerClassName } = props;
 
   return (
     <Select>
-      <SelectTrigger id={id} className={triggerClassName ?? "w-24 h-7"}>
+      <SelectTrigger className={triggerClassName ?? "w-24 h-7"}>
         <SelectValue placeholder={title} />
       </SelectTrigger>
       <SelectContent>
