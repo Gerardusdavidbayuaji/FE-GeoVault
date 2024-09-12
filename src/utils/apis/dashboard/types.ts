@@ -37,32 +37,37 @@ export interface SampleData {
 interface Month {
   id: number;
   value: string;
-  month: string;
+  label: string;
 }
 
 interface Year {
   id: number;
-  year: number;
+  value: string;
+  label: string;
 }
 
 interface RiverArea {
   id: number;
-  ws: string;
+  value: string;
+  label: string;
 }
 
 interface BBWS {
   id: number;
-  bbws: string;
+  value: string;
+  label: string;
 }
 
 interface Source {
   id: number;
-  data_source: string;
+  value: string;
+  label: string;
 }
 
 interface SpatialData {
   id: number;
-  data_spasial: string;
+  value: string;
+  label: string;
 }
 
 interface Basemap {
