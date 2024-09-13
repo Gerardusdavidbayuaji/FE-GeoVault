@@ -85,3 +85,10 @@ export interface FilterData {
   all_data: SpatialData[];
   basemap: Basemap[];
 }
+
+export interface Notif {
+  id: number;
+  file_name: string;
+  ws: string;
+  date: string;
+}

@@ -1,5 +1,4 @@
-import { SampleData } from "./types";
-import { FilterData } from "./types";
+import { Notif, SampleData, FilterData } from "./types";
 
 export const sampleDatas: SampleData[] = [
   {
@@ -865,5 +864,38 @@ export const filterDatas: FilterData[] = [
           "ihttps://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}@2x.png?key=AW8IuG306IIk8kNdxEw6",
       },
     ],
+  },
+];
+
+export const notifications: Notif[] = [
+  {
+    id: 1,
+    file_name: "Curah Hujan",
+    ws: "WS Bondoyudo Bedadung",
+    date: "2024-09-01",
+  },
+  {
+    id: 2,
+    file_name: "Irigasi",
+    ws: "WS Madura Bawean",
+    date: "2024-09-04",
+  },
+  {
+    id: 3,
+    file_name: "Sungai",
+    ws: "WS Brantas",
+    date: "2024-09-03",
+  },
+  {
+    id: 4,
+    file_name: "Sawah",
+    ws: "WS Bondoyudo Bedadung",
+    date: "2024-09-02",
+  },
+  {
+    id: 5,
+    file_name: "Genangan",
+    ws: "WS Brantas",
+    date: "2024-09-05",
   },
 ];

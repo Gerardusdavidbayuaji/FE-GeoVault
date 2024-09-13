@@ -14,19 +14,28 @@ import { Button } from "@/components/ui/button";
 type Props = {
   title?: string;
   children: ReactNode;
-  description?: string | any;
+  description?: ReactNode;
   onCancel?: () => {};
   onAction?: () => {};
   action?: string;
+  triggerClass?: string;
 };
 
 const CustomDialog = (props: Props) => {
-  const { children, title, description, onCancel, onAction, action } = props;
+  const {
+    children,
+    title,
+    description,
+    onCancel,
+    onAction,
+    action,
+    triggerClass = "",
+  } = props;
 
   return (
     <Dialog>
-      <DialogTrigger>{children}</DialogTrigger>
-      <DialogContent className="dark:bg-black/40">
+      <DialogTrigger className={`${triggerClass}`}>{children}</DialogTrigger>
+      <DialogContent>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>
