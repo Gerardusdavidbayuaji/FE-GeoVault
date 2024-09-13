@@ -1,372 +1,174 @@
-import { useState } from "react";
-
-import { Checkbox } from "@/components/ui/checkbox";
-import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
-import { ChevronDown } from "lucide-react";
-import FormMonthSelect from "./FormMonthSelect";
+import { LogOut, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import {
-  AlertDialogDescription,
-  AlertDialogTrigger,
-  AlertDialogContent,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialog,
-} from "@/components/ui/alert-dialog";
-import FormYearSelect from "./FormYearsSelect";
-import FormBalaiSelect from "./FormBalaiSelect";
-import FormRiverSelect from "./FormRiverSelect";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-const Download = () => {
-  const [isExpandedPDA, setIsExpandedPDA] = useState(false);
-  const [isExpandedPCH, setIsExpandedPCH] = useState(false);
-  const [isExpandedARR, setIsExpandedARR] = useState(true);
-  const [isExpandedAWLR, setIsExpandedAWLR] = useState(false);
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
-  const handleTogglePDA = () => {
-    setIsExpandedPDA(!isExpandedPDA);
-  };
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
-  const handleTogglePCH = () => {
-    setIsExpandedPCH(!isExpandedPCH);
-  };
+import DropDownIcon from "/assets/drop-down-icon.png";
+import NotifIcon from "/assets/notif-icon.png";
+import AdminIcon from "/assets/admin_icon.jpg";
 
-  const handleToggleARR = () => {
-    setIsExpandedARR(!isExpandedARR);
-  };
-
-  const handleToggleAWLR = () => {
-    setIsExpandedAWLR(!isExpandedAWLR);
-  };
-
+const Navbar = () => {
   return (
-    <div className="w-72 h-full flex flex-col rounded-lg shadow-full p-2">
-      <h3 className="text-base font-bold text-black flex text-center justify-center my-[3px]">
-        Data GIS
-      </h3>
-      <div className="grid grid-cols-2 gap-2">
-        <FormMonthSelect />
-        <FormYearSelect />
-      </div>
-
-      <div className="my-2 space-y-2">
-        <FormBalaiSelect />
-        <FormRiverSelect />
-      </div>
-
-      <div className="mb-2 space-y-2 flex-grow h-2 overflow-y-scroll p-2">
-        <h4 className="font-bold text-xs mb-1">Pilih Data</h4>
-        <div className="space-y-2 cursor-pointer">
-          <div className="space-y-1">
-            <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleTogglePDA}
-            >
-              <h1 className="font-normal text-xs">Pos Duga Air (PDA)</h1>
-
-              {isExpandedPDA ? (
-                <ChevronDown className="w-3 h-auto" />
-              ) : (
-                <ChevronRight className="w-3 h-auto" />
-              )}
+    <header className="bg-[#00527a] w-full p-2">
+      <nav className="flex gap-3 justify-end">
+        <Dialog>
+          <DialogTrigger asChild>
+            <div className="flex outline outline-[#00b7cc] outline-2 items-center justify-center w-8 h-8 m-2 rounded-full cursor-pointer">
+              <img
+                src={NotifIcon}
+                alt="Notification Icon"
+                className="flex w-4 h-auto"
+              />
             </div>
-            <div
-              className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
-                isExpandedPDA ? "max-h-40" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="danau" />
-                    <label htmlFor="danau" className="font-normal text-xs">
-                      Danau
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="bendungan" />
-                    <label htmlFor="bendungan" className="font-normal text-xs">
-                      Bendungan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="embung" />
-                    <label htmlFor="embung" className="font-normal text-xs">
-                      Embung
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="space-y-1">
-            <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleTogglePCH}
-            >
-              <h1 className="font-normal text-xs">Pos Curah Hujan (PCH)</h1>
-
-              {isExpandedPCH ? (
-                <ChevronDown className="w-3 h-auto" />
-              ) : (
-                <ChevronRight className="w-3 h-auto" />
-              )}
-            </div>
-            <div
-              className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
-                isExpandedPCH ? "max-h-40" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="curah_hujan" />
-                    <label
-                      htmlFor="curah_hujan"
-                      className="font-normal text-xs"
-                    >
-                      Curah Hujan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="fase_tanam" />
-                    <label htmlFor="fase_tanam" className="font-normal text-xs">
-                      Fase Tanam
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_banjir" />
-                    <label
-                      htmlFor="genangan_banjir"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Banjir
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="space-y-1">
-            <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleToggleARR}
-            >
-              <h1 className="font-normal text-xs">ARR</h1>
-
-              {isExpandedARR ? (
-                <ChevronDown className="w-3 h-auto" />
-              ) : (
-                <ChevronRight className="w-3 h-auto" />
-              )}
-            </div>
-            <div
-              className={`transition-max-height duration-300 ease-in-out delay-200 overflow-hidden ${
-                isExpandedARR ? "max-h-screen" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="curah_hujan" />
-                    <label
-                      htmlFor="curah_hujan"
-                      className="font-normal text-xs"
-                    >
-                      Curah Hujan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="fase_tanam" />
-                    <label htmlFor="fase_tanam" className="font-normal text-xs">
-                      Fase Tanam
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_banjir" />
-                    <label
-                      htmlFor="genangan_banjir"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Banjir
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_rob" />
-                    <label
-                      htmlFor="genangan_rob"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Rob
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="history_banjir" />
-                    <label
-                      htmlFor="history_banjir"
-                      className="font-normal text-xs"
-                    >
-                      History Banjir
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="penggunaan_lahan" />
-                    <label
-                      htmlFor="penggunaan_lahan"
-                      className="font-normal text-xs"
-                    >
-                      Penggunaan Lahan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="tutupan_lahan" />
-                    <label
-                      htmlFor="tutupan_lahan"
-                      className="font-normal text-xs"
-                    >
-                      Tutupan Lahan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="sempadan_pantai" />
-                    <label
-                      htmlFor="sempadan_pantai"
-                      className="font-normal text-xs"
-                    >
-                      Sempadan Pantai
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="sempadan_danau" />
-                    <label
-                      htmlFor="sempadan_danau"
-                      className="font-normal text-xs"
-                    >
-                      Sempadan Danau
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="space-y-1">
-            <div
-              className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-75"
-              onClick={handleToggleAWLR}
-            >
-              <h1 className="font-normal text-xs">AWLR</h1>
-
-              {isExpandedAWLR ? (
-                <ChevronDown className="w-3 h-auto" />
-              ) : (
-                <ChevronRight className="w-3 h-auto" />
-              )}
-            </div>
-            <div
-              className={`transition-max-height duration-300 ease-linear delay-200 overflow-hidden ${
-                isExpandedAWLR ? "max-h-40" : "max-h-0"
-              }`}
-            >
-              <ul className="pl-3 ml-2 font-normal text-xs border-l-2 border-[#f2f2f2] space-y-1">
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="curah_hujan" />
-                    <label
-                      htmlFor="curah_hujan"
-                      className="font-normal text-xs"
-                    >
-                      Curah Hujan
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="fase_tanam" />
-                    <label htmlFor="fase_tanam" className="font-normal text-xs">
-                      Fase Tanam
-                    </label>
-                  </div>
-                </li>
-                <li className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="genangan_banjir" />
-                    <label
-                      htmlFor="genangan_banjir"
-                      className="font-normal text-xs"
-                    >
-                      Genangan Banjir
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <AlertDialog>
-        <AlertDialogTrigger>
-          <Button className="bg-[#00527a] hover:bg-[#00527a] w-full rounded-md">
-            <div className="flex gap-2 items-center justify-center">
-              <img src="/assets/download-icon.png" className="w-6 h-auto" />
-              <p className="font-normal text-sm text-white">Download</p>
-            </div>
-          </Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Apakah Anda yakin?</AlertDialogTitle>
-            <div>
-              <div className="flex items-center space-x-2">
-                <Checkbox id="terms2" disabled />
-                <label
-                  htmlFor="terms2"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Bendungan.zip
-                </label>
+          </DialogTrigger>
+          <DialogContent className="h-56">
+            <DialogHeader>
+              <DialogTitle>Notifikasi (5)</DialogTitle>
+            </DialogHeader>
+            <div className="overflow-y-scroll py-2 pr-2">
+              <div className="text-sm font-normal">
+                <div className="bg-[#d4eff7] rounded-md p-2">
+                  <h1 className="text-[#00527a] font-medium">
+                    BBWS Pamali Juana
+                  </h1>
+                </div>
+                <div className="p-2">
+                  <p>
+                    Telah menggunggah Data{" "}
+                    <span className="font-medium">Daerah Irigasi</span> pada
+                    <span className="font-medium"> WS Jeneberang</span>, segera
+                    proses data.
+                  </p>
+                </div>
+                <div className="flex items-center justify-end text-xs py-1 px-2 ">
+                  7/20/2024
+                </div>
+                <hr className="border-1 border-[#7db5c5] mb-2" />
               </div>
             </div>
-            <AlertDialogDescription>
-              Ini akan mengunduh data dan menyimpan salinannya di perangkat
-              Anda.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Batal</AlertDialogCancel>
-            <AlertDialogAction>Download</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </div>
+          </DialogContent>
+        </Dialog>
+
+        <div className="flex bg-[#00b7cc] rounded-full items-center justify-center gap-2">
+          <img
+            src={AdminIcon}
+            alt="Admin Icon"
+            className="w-6 h-auto ml-2 rounded-full"
+          />
+          <p className="text-white text-base font-normal">admin_geovault</p>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="ml-3 mr-4">
+                <img src={DropDownIcon} alt="Drop Down Icon" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 mr-4 mt-6">
+              <DropdownMenuLabel>Akun admin_geovault</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuGroup className="space-y-1">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="flex gap-1 p-2 items-center justify-start text-xs cursor-pointer rounded-md hover:bg-[#bad7e8]">
+                      <User className="mr-2 h-4 w-4" />
+                      <span>Ganti Password</span>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Ganti Password</DialogTitle>
+                      <DialogDescription>
+                        Buat perubahan pada password Anda di sini.
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="grid gap-4 py-4">
+                      <div className="grid grid-cols-4 items-center gap-4">
+                        <Label
+                          htmlFor="password"
+                          className="text-sm font-semibold"
+                        >
+                          Password Lama
+                        </Label>
+                        <Input
+                          type="password"
+                          id="password"
+                          defaultValue="pupr12345"
+                          className="col-span-3"
+                        />
+                      </div>
+                      <div className="grid grid-cols-4 items-center gap-4">
+                        <Label
+                          htmlFor="password"
+                          className="text-sm font-semibold"
+                        >
+                          Password Baru
+                        </Label>
+                        <Input
+                          type="password"
+                          id="password"
+                          defaultValue="pupr12345"
+                          className="col-span-3"
+                        />
+                      </div>
+                      <div className="grid grid-cols-4 items-center gap-4">
+                        <Label
+                          htmlFor="password"
+                          className="text-sm font-semibold"
+                        >
+                          Konfirmasi Password Baru
+                        </Label>
+                        <Input
+                          type="password"
+                          id="password"
+                          defaultValue="pupr12345"
+                          className="col-span-3"
+                        />
+                      </div>
+                    </div>
+                    <DialogFooter>
+                      <Button
+                        className="bg-[#5ec95d] hover:bg-[#48c23d] text-white hover:text-white"
+                        type="submit"
+                        variant="outline"
+                      >
+                        Simpan
+                      </Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+                <Link to="/">
+                  <div className="flex rounded-md hover:bg-[#bad7e8] gap-1 p-2 items-center justify-start text-xs cursor-pointer">
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Keluar</span>
+                  </div>
+                </Link>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </nav>
+    </header>
   );
 };
 
-export default Download;
+export default Navbar;
