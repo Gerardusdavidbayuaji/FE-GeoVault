@@ -1,174 +1,155 @@
-import { LogOut, User } from "lucide-react";
-import { Link } from "react-router-dom";
-
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+const geodatabases = [
+  {
+    file_name: "GarisPantai.zip",
+    data: "Garis Pantai",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "TitikGenangan.zip",
+    data: "Titik Genangan",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "GenanganRob.zip",
+    data: "Genangan Rob",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "TitikKebakaran.zip",
+    data: "Titik Kebakaran",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "BatasKecamatan.zip",
+    data: "Batas Kecamatan",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "TitikEmbung.zip",
+    data: "Titik Embung",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "BatasKabupaten.zip",
+    data: "Batas Kabupaten",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "PenggunaanLahan.tif",
+    data: "Penggunaan Lahan",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+  {
+    file_name: "CurahHujan.tif",
+    data: "Curah Hujan",
+    bbws: "BBWS Pamali Juana",
+    ws: "Jratunseluna",
+    source: "Balai",
+    tanggal: "20/1/2024",
+    size: "200 mb",
+    status_qc: "Diterima",
+    hasil_qc: "Update",
+  },
+];
 
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-
-import DropDownIcon from "/assets/drop-down-icon.png";
-import NotifIcon from "/assets/notif-icon.png";
-import AdminIcon from "/assets/admin_icon.jpg";
-
-const Navbar = () => {
+const DataTable = () => {
   return (
-    <header className="bg-[#00527a] w-full p-2">
-      <nav className="flex gap-3 justify-end">
-        <Dialog>
-          <DialogTrigger asChild>
-            <div className="flex outline outline-[#00b7cc] outline-2 items-center justify-center w-8 h-8 m-2 rounded-full cursor-pointer">
-              <img
-                src={NotifIcon}
-                alt="Notification Icon"
-                className="flex w-4 h-auto"
-              />
-            </div>
-          </DialogTrigger>
-          <DialogContent className="h-56">
-            <DialogHeader>
-              <DialogTitle>Notifikasi (5)</DialogTitle>
-            </DialogHeader>
-            <div className="overflow-y-scroll py-2 pr-2">
-              <div className="text-sm font-normal">
-                <div className="bg-[#d4eff7] rounded-md p-2">
-                  <h1 className="text-[#00527a] font-medium">
-                    BBWS Pamali Juana
-                  </h1>
-                </div>
-                <div className="p-2">
-                  <p>
-                    Telah menggunggah Data{" "}
-                    <span className="font-medium">Daerah Irigasi</span> pada
-                    <span className="font-medium"> WS Jeneberang</span>, segera
-                    proses data.
-                  </p>
-                </div>
-                <div className="flex items-center justify-end text-xs py-1 px-2 ">
-                  7/20/2024
-                </div>
-                <hr className="border-1 border-[#7db5c5] mb-2" />
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
-
-        <div className="flex bg-[#00b7cc] rounded-full items-center justify-center gap-2">
-          <img
-            src={AdminIcon}
-            alt="Admin Icon"
-            className="w-6 h-auto ml-2 rounded-full"
-          />
-          <p className="text-white text-base font-normal">admin_geovault</p>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="ml-3 mr-4">
-                <img src={DropDownIcon} alt="Drop Down Icon" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 mr-4 mt-6">
-              <DropdownMenuLabel>Akun admin_geovault</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuGroup className="space-y-1">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <div className="flex gap-1 p-2 items-center justify-start text-xs cursor-pointer rounded-md hover:bg-[#bad7e8]">
-                      <User className="mr-2 h-4 w-4" />
-                      <span>Ganti Password</span>
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Ganti Password</DialogTitle>
-                      <DialogDescription>
-                        Buat perubahan pada password Anda di sini.
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label
-                          htmlFor="password"
-                          className="text-sm font-semibold"
-                        >
-                          Password Lama
-                        </Label>
-                        <Input
-                          type="password"
-                          id="password"
-                          defaultValue="pupr12345"
-                          className="col-span-3"
-                        />
-                      </div>
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label
-                          htmlFor="password"
-                          className="text-sm font-semibold"
-                        >
-                          Password Baru
-                        </Label>
-                        <Input
-                          type="password"
-                          id="password"
-                          defaultValue="pupr12345"
-                          className="col-span-3"
-                        />
-                      </div>
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label
-                          htmlFor="password"
-                          className="text-sm font-semibold"
-                        >
-                          Konfirmasi Password Baru
-                        </Label>
-                        <Input
-                          type="password"
-                          id="password"
-                          defaultValue="pupr12345"
-                          className="col-span-3"
-                        />
-                      </div>
-                    </div>
-                    <DialogFooter>
-                      <Button
-                        className="bg-[#5ec95d] hover:bg-[#48c23d] text-white hover:text-white"
-                        type="submit"
-                        variant="outline"
-                      >
-                        Simpan
-                      </Button>
-                    </DialogFooter>
-                  </DialogContent>
-                </Dialog>
-                <Link to="/">
-                  <div className="flex rounded-md hover:bg-[#bad7e8] gap-1 p-2 items-center justify-start text-xs cursor-pointer">
-                    <LogOut className="mr-2 h-4 w-4" />
-                    <span>Keluar</span>
-                  </div>
-                </Link>
-              </DropdownMenuGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
+    <div className="flex flex-grow items-center justify-center">
+      <div className="w-full">
+        <div className="flex-grow">
+          <Table>
+            <TableHeader className="bg-[#d4eff7] text-sm font-medium text-[#949494] rounded-md">
+              <TableRow>
+                <TableHead className="text-left">File Name</TableHead>
+                <TableHead className="text-left">Data</TableHead>
+                <TableHead className="text-left">B/BWS</TableHead>
+                <TableHead className="text-left">WS</TableHead>
+                <TableHead className="text-left">Source</TableHead>
+                <TableHead className="text-left">Date</TableHead>
+                <TableHead className="text-left">Size</TableHead>
+                <TableHead className="text-left">Status QC</TableHead>
+                <TableHead className="text-left">Hasil QC</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className="text-xs font-normal">
+              {geodatabases.map((database) => (
+                <TableRow key={database.file_name}>
+                  <TableCell className="text-[#00527a]">
+                    {database.file_name}
+                  </TableCell>
+                  <TableCell>{database.data}</TableCell>
+                  <TableCell>{database.bbws}</TableCell>
+                  <TableCell>{database.ws}</TableCell>
+                  <TableCell>{database.source}</TableCell>
+                  <TableCell>{database.tanggal}</TableCell>
+                  <TableCell>{database.size}</TableCell>
+                  <TableCell>{database.status_qc}</TableCell>
+                  <TableCell>{database.hasil_qc}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 };
 
-export default Navbar;
+export default DataTable;

@@ -34,6 +34,14 @@ export interface SampleData {
   all_data: AllDataEntry[];
 }
 
+export interface PaginatedData {
+  currentPage: number;
+  totalPages: number;
+  pageSize: number;
+  totalItems: number;
+  data: Dataset[];
+}
+
 interface Month {
   id: number;
   value: string;
