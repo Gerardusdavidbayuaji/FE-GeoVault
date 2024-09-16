@@ -1,10 +1,11 @@
 import { useState } from "react";
+
 import { paginationDatas } from "@/utils/apis/dashboard";
 import Pagination from "./Pagination";
 
 const DataTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 11;
 
   const currentPageData = paginationDatas.find(
     (page) => page.currentPage === currentPage
@@ -24,19 +25,18 @@ const DataTable = () => {
 
   return (
     <div className="flex flex-col h-full">
+      <div className="grid grid-cols-9 text-sm font-medium p-5 bg-[#d5eff7] text-[#171615] rounded-t-md">
+        <div>Nama Data</div>
+        <div>Tipe Data</div>
+        <div>BBWS</div>
+        <div>WS</div>
+        <div>Sumber</div>
+        <div>Tanggal</div>
+        <div>Ukuran</div>
+        <div>Status QC</div>
+        <div>Hasil QC</div>
+      </div>
       <div className="flex-grow">
-        <div className="grid grid-cols-9 text-sm font-medium p-5 bg-[#d5eff7] text-[#171615] rounded-t-md">
-          <div>Nama Data</div>
-          <div>Tipe Data</div>
-          <div>BBWS</div>
-          <div>WS</div>
-          <div>Sumber</div>
-          <div>Tanggal</div>
-          <div>Ukuran</div>
-          <div>Status QC</div>
-          <div>Hasil QC</div>
-        </div>
-
         {currentItems.map((dataset) => (
           <div
             key={dataset.feature_id}

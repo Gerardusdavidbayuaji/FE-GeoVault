@@ -16,14 +16,14 @@ const ManageAdmin = () => {
   };
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col h-screen">
       <div className="p-4 flex flex-col flex-grow">
         <SelectManageBalai
           onCancelClick={handleCancelAdminClick}
           onPublishClick={handlePublishAdminClick}
           activeButton={activeButton}
-          cancelTitle="Data baru (5)"
-          publishTitle="Publish (15)"
+          cancelTitle="Data baru (33)"
+          publishTitle="Publish (33)"
         />
         {activeButton === "reject" ? (
           <ManageInformationData />

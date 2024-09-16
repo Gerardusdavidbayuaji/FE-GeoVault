@@ -1,6 +1,8 @@
 import { LogOut, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import ChangePassword from "./ChangePassword";
+import CustomDialog from "./Dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,20 +11,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import ChangePassword from "./ChangePassword";
-import DropDownIcon from "/assets/drop-down-icon.png";
-import CustomDialog from "./Dialog";
+
+import AdminIcon from "/assets/admin_icon.jpg";
 
 const DropDown = () => {
   return (
-    <div>
+    <div className="mb-4">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="ml-3 mr-4">
-            <img src={DropDownIcon} alt="Drop Down Icon" />
-          </button>
+          <img
+            src={AdminIcon}
+            alt="Admin Icon"
+            className="w-8 h-auto rounded-full"
+          />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56 mr-4 mt-6">
+        <DropdownMenuContent className=" w-[242px] ml-[70px] -mb-9">
           <DropdownMenuLabel>Akun admin_geovault</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup className="space-y-1">

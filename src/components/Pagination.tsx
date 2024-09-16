@@ -36,7 +36,7 @@ const Pagination = (props: PaginationProps) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full bottom-0">
       <div className="flex items-center justify-between">
         <div className="text-xs font-normal text-[#00527a]">
           {`Menampilkan ${
