@@ -16,12 +16,12 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const FormSchema = z.object({
-  username: z.string().min(1, "Username is required").max(30),
-  email: z.string().min(1, "Email is required").email("Invalid email"),
+  username: z.string().min(1, "Usernamediperlukan").max(30),
+  email: z.string().min(1, "Email diperlukan").email("Email tidak valid"),
   password: z
     .string()
-    .min(1, "Password is required")
-    .min(8, "Password must have at least 8 characters"),
+    .min(1, "Password diperlukan")
+    .min(8, "Password harus memiliki minimal 8 karakter"),
 });
 
 const RegisterForm = () => {
@@ -54,7 +54,7 @@ const RegisterForm = () => {
               <FormItem>
                 <FormLabel>Username</FormLabel>
                 <FormControl>
-                  <Input placeholder="e.g: admin_geovault" {...field} />
+                  <Input placeholder="e.g: geovault" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -67,10 +67,7 @@ const RegisterForm = () => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="e.g: admin_geovault@gmail.com"
-                    {...field}
-                  />
+                  <Input placeholder="e.g: geovault@gmail.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -84,7 +81,7 @@ const RegisterForm = () => {
                 <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="enter your password"
+                    placeholder="Masukan password"
                     type="password"
                     {...field}
                   />

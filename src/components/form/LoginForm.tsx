@@ -16,11 +16,11 @@ import {
 } from "@/components/ui/form";
 
 const FormSchema = z.object({
-  email: z.string().min(1, "Email is required").email("Invalid email"),
+  email: z.string().min(1, "Email diperlukan").email("Email tidak valid"),
   password: z
     .string()
-    .min(1, "Password is required")
-    .min(8, "Password must have then 8 characters"),
+    .min(1, "Password diperlukan")
+    .min(8, "Password harus memiliki minimal 8 karakter"),
 });
 
 const LoginForm = () => {
@@ -53,7 +53,7 @@ const LoginForm = () => {
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="admin_geovault@gmail.com"
+                    placeholder="geovault@gmail.com"
                     {...field}
                     className="border border-[#00527a]"
                   />
@@ -70,7 +70,7 @@ const LoginForm = () => {
                 <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="enter your password"
+                    placeholder="Masukan password"
                     type="password"
                     className="border border-[#00527a]"
                     {...field}
