@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { filterDatas } from "@/utils/apis/dashboard";
 import {
   Select,
   SelectContent,
@@ -7,8 +8,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import { filterDatas } from "@/utils/apis/dashboard";
 
 interface Props {
   triggerClassName?: string;
