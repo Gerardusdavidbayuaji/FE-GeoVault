@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
+import Notification from "./Notification";
+import CustomDialog from "./Dialog";
+import DropDown from "./DropDown";
 
 import DashboardActiveIcon from "/assets/dashboard-active-icon.png";
 import ManagedActiveIcon from "/assets/document-active-icon.png";
 import DashboardIcon from "/assets/dashboard-icon.png";
 import ManageIcon from "/assets/document-icon.png";
-import CloseIcon from "/assets/close-icon.png";
+import NotifIcon from "/assets/notif-icon.png";
 
 const Sidebar = ({
   onDashboardClick,
@@ -55,10 +58,21 @@ const Sidebar = ({
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-end cursor-pointer">
-        <Link to="/">
-          <img src={CloseIcon} alt="Close Icon" className="w-5 h-auto mb-4" />
-        </Link>
+      <div className="flex flex-col items-center justify-end cursor-pointer gap-2">
+        <CustomDialog
+          title="Notifikasi (5)"
+          action="Tutup"
+          description={<Notification />}
+        >
+          <div className="flex items-center justify-center w-9 h-9 rounded-md bg-[#d4eff7]">
+            <img
+              src={NotifIcon}
+              alt="Notification Icon"
+              className="flex w-5 h-auto"
+            />
+          </div>
+        </CustomDialog>
+        <DropDown />
       </div>
     </div>
   );
