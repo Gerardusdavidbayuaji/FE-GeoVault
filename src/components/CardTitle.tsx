@@ -3,7 +3,7 @@ import { SampleData } from "@/utils/apis/dashboard";
 
 const CardTitle = () => {
   return (
-    <>
+    <article>
       <div className="grid grid-cols-4 gap-2">
         {sampleDatas.map((sampledata: SampleData) =>
           sampledata.data.map((entry) => {
@@ -47,7 +47,7 @@ const CardTitle = () => {
           })
         )}
       </div>
-    </>
+    </article>
   );
 };
 

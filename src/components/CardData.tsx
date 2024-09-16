@@ -3,7 +3,7 @@ import { SampleData } from "@/utils/apis/dashboard";
 
 const CardData = () => {
   return (
-    <>
+    <article>
       <div className="grid grid-cols-6 gap-2 rounded-md">
         {sampleDatas.map((sampleData: SampleData) =>
           sampleData.all_data.map((total) => {
@@ -24,7 +24,7 @@ const CardData = () => {
           })
         )}
       </div>
-    </>
+    </article>
   );
 };
 
