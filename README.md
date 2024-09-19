@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# GeoVault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Geovault is a Web App designed as a platform for spatial data collection, allowing users to easily upload and download spatial data. Additionally, users can view spatial data visualizations directly through the application, making data access and management more efficient.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Register, Login, Edit, and Delete Profile
+- Create, Read, Upload and Download Spasial Data
+- Responsive Web
+- Light/Dark Mode
 
-## Expanding the ESLint configuration
+# Deployment
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Geovault
 
-- Configure the top-level `parserOptions` property like this:
+# Tech Stack
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Client: React.js, TailwindCSS, Shadcn/ui, Geoserver
+
+# Installation
+
+Clone the project
+
+```bash
+git clone https://github.com/Gerardusdavidbayuaji/FE-GeoVault
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the project directory
+
+```bash
+cd FE-GeoVault
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the server
+
+```bash
+npm run dev
+```
