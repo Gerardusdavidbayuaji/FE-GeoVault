@@ -9,12 +9,17 @@ import FormRiverSelect from "./FormRiverSelect";
 import FormYearSelect from "./FormYearsSelect";
 import Alert from "./AlertDialog";
 
-const Download = () => {
+interface DownloadProps {
+  onDatasetSelect: (datasetName: string) => void;
+}
+
+const Download = ({ onDatasetSelect }: DownloadProps) => {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
+  const [selectedDatasets, setSelectedDatasets] = useState<string[]>([]);
 
   useEffect(() => {
     if (sampleDatas[0].data.length >= 3) {
-      setExpandedIds([sampleDatas[0].data[2].id]); // Expand the 3rd item by default
+      setExpandedIds([sampleDatas[0].data[2].id]);
     }
   }, []);
 
@@ -24,6 +29,27 @@ const Download = () => {
     } else {
       setExpandedIds([...expandedIds, id]);
     }
+  };
+
+  const handleDatasetSelect = (datasetName: string) => {
+    setSelectedDatasets((prev) => {
+      if (prev.includes(datasetName)) {
+        return prev.filter((name) => name !== datasetName);
+      }
+      return [...prev, datasetName];
+    });
+    onDatasetSelect(datasetName);
+  };
+
+  const handleDownload = () => {
+    selectedDatasets.forEach((dataset) => {
+      const data = sampleDatas[0].data
+        .flatMap((d) => d.datasets)
+        .find((ds) => ds.file_name === dataset);
+      if (data) {
+        window.open(data.download);
+      }
+    });
   };
 
   return (
@@ -64,7 +90,13 @@ const Download = () => {
                     className="hover:bg-[#f2f2f2] py-1 pl-1 rounded-md transition duration-75 delay-75"
                   >
                     <div className="flex items-center space-x-2">
-                      <Checkbox id={dataset.file_name} />
+                      <Checkbox
+                        id={dataset.file_name}
+                        checked={selectedDatasets.includes(dataset.file_name)}
+                        onCheckedChange={() =>
+                          handleDatasetSelect(dataset.file_name)
+                        }
+                      />
                       <label
                         htmlFor={dataset.file_name}
                         className="font-normal text-xs"
@@ -83,9 +115,7 @@ const Download = () => {
         title="Apakah Anda yakin?"
         description="Ini akan mengunduh data dan menyimpan salinannya di perangkat
         Anda."
-        onAction={() => {
-          console.log("Downloading...");
-        }}
+        onAction={handleDownload}
         onActionTitle="Download"
         style="bg-[#00527a] hover:bg-[#00527a]/80 w-full h-10 rounded-md"
       >
