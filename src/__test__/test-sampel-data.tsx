@@ -1,4 +1,4 @@
-import { SampleData } from "./types";
+import { SampleData } from "@/utils/apis/dashboard";
 
 export const sampleDatas: SampleData[] = [
   {
@@ -14,10 +14,10 @@ export const sampleDatas: SampleData[] = [
           {
             feature_id: 1,
             file_name: "irigasi",
+            store: "geovault:malang_irigasi",
             type: "irigasi.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
             bbws: "BBWS Brantas",
             ws: "WS Bondoyudo Bedadung",
             source: "Rupa Bumi Indonesia",
@@ -39,10 +39,10 @@ export const sampleDatas: SampleData[] = [
           {
             feature_id: 1,
             file_name: "pemanfaatan",
+            store: "geovault:malang_pemanfaatan",
             type: "pemanfaatan.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
             bbws: "BBWS Brantas",
             ws: "WS Madura Bawean",
             source: "Rupa Bumi Indonesia",
@@ -54,10 +54,10 @@ export const sampleDatas: SampleData[] = [
           {
             feature_id: 2,
             file_name: "curah_hujan_010424_050424",
+            store: "geovault:malang_curah_hujan01042024_05042024",
             type: "curah_hujan_010424_050424.zip",
             download:
               "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fpng",
             bbws: "BBWS Brantas",
             ws: "WS Brantas",
             source: "Rupa Bumi Indonesia",
@@ -79,10 +79,10 @@ export const sampleDatas: SampleData[] = [
           {
             feature_id: 1,
             file_name: "ladang",
+            store: "geovault:malang_ladang",
             type: "ladang.zip",
             download:
               "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&styles=&format=image%2Fpng",
             bbws: "BBWS Brantas",
             ws: "WS Bondoyudo Bedadung",
             source: "Rupa Bumi Indonesia",
@@ -104,10 +104,10 @@ export const sampleDatas: SampleData[] = [
           {
             feature_id: 1,
             file_name: "curah_hujan_010424_050424",
+            store: "geovault:malang_curah_hujan_01022024_05022024",
             type: "curah_hujan_010424_050424.zip",
             download:
               "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan_01022024_05022024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
-            wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan_01022024_05022024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fpng",
             bbws: "BBWS Brantas",
             ws: "WS Madura Bawean",
             source: "Rupa Bumi Indonesia",

@@ -18,26 +18,25 @@ const Download = ({ onDatasetSelect }: DownloadProps) => {
   const [selectedDatasets, setSelectedDatasets] = useState<string[]>([]);
 
   useEffect(() => {
-    if (sampleDatas[0].data.length >= 3) {
+    if (sampleDatas && sampleDatas[0]?.data?.length >= 3) {
       setExpandedIds([sampleDatas[0].data[2].id]);
     }
   }, []);
 
   const handleTogglePDA = (id: number) => {
-    if (expandedIds.includes(id)) {
-      setExpandedIds(expandedIds.filter((expandedId) => expandedId !== id));
-    } else {
-      setExpandedIds([...expandedIds, id]);
-    }
+    setExpandedIds((prev) =>
+      prev.includes(id)
+        ? prev.filter((expandedId) => expandedId !== id)
+        : [...prev, id]
+    );
   };
 
   const handleDatasetSelect = (datasetName: string) => {
-    setSelectedDatasets((prev) => {
-      if (prev.includes(datasetName)) {
-        return prev.filter((name) => name !== datasetName);
-      }
-      return [...prev, datasetName];
-    });
+    setSelectedDatasets((prev) =>
+      prev.includes(datasetName)
+        ? prev.filter((name) => name !== datasetName)
+        : [...prev, datasetName]
+    );
     onDatasetSelect(datasetName);
   };
 
@@ -68,7 +67,7 @@ const Download = ({ onDatasetSelect }: DownloadProps) => {
 
       <div className="mb-2 space-y-2 flex-grow h-2 overflow-y-scroll p-2">
         <h4 className="font-bold text-xs mb-1">Pilih Data</h4>
-        {sampleDatas[0].data.map((dataEntry) => (
+        {sampleDatas[0]?.data.map((dataEntry) => (
           <div key={dataEntry.id} className="space-y-1">
             <div
               className="h-7 flex items-center justify-between w-full rounded-md p-2 hover:bg-[#f2f2f2] transition duration-75 delay-50"

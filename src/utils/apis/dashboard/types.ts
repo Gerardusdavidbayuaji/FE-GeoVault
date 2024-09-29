@@ -1,9 +1,9 @@
 interface Dataset {
   feature_id: number;
   file_name: string;
+  store: string;
   type: string;
   download: string;
-  wms: string;
   bbws: string;
   ws: string;
   source: string;
