@@ -905,10 +905,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 1,
         file_name: "Irigasi",
+        store: "geovault:malang_irigasi",
         type: "Irigasi.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -920,10 +920,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 2,
         file_name: "Jalan",
+        store: "geovault:malang_irigasi",
         type: "Jalan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_jalan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_jalan&bbox=112.56944605229353%2C-8.050958581073587%2C112.69341873668537%2C-7.910836884914275&width=679&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -935,10 +935,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 3,
         file_name: "Ladang",
+        store: "geovault:malang_irigasi",
         type: "Ladang.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -950,10 +950,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 4,
         file_name: "Pemanfaatan",
+        store: "geovault:malang_irigasi",
         type: "Pemanfaatan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -965,10 +965,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 5,
         file_name: "Pemukiman",
+        store: "geovault:malang_irigasi",
         type: "Pemukiman.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -980,10 +980,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 6,
         file_name: "Perkebunan",
+        store: "geovault:malang_irigasi",
         type: "Perkebunan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -995,10 +995,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 7,
         file_name: "Sawah",
+        store: "geovault:malang_irigasi",
         type: "Sawah.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1010,10 +1010,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 8,
         file_name: "Genangan",
+        store: "geovault:malang_irigasi",
         type: "Genangan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1025,10 +1025,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 9,
         file_name: "Pemanfaatan",
+        store: "geovault:malang_irigasi",
         type: "Pemanfaatan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1040,10 +1040,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 10,
         file_name: "Curah Hujan",
+        store: "geovault:malang_irigasi",
         type: "Curah Hujan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan01042024_05042024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1055,10 +1055,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 11,
         file_name: "Pemukiman",
+        store: "geovault:malang_irigasi",
         type: "Pemukiman.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1078,10 +1078,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 12,
         file_name: "Perkebunan",
+        store: "geovault:malang_irigasi",
         type: "Perkebunan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1093,10 +1093,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 13,
         file_name: "Genangan",
+        store: "geovault:malang_irigasi",
         type: "Genangan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1108,10 +1108,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 14,
         file_name: "Ladang",
+        store: "geovault:malang_irigasi",
         type: "Ladang.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1123,10 +1123,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 15,
         file_name: "Pemukiman",
+        store: "geovault:malang_irigasi",
         type: "Pemukiman.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1138,10 +1138,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 16,
         file_name: "Toponim",
+        store: "geovault:malang_irigasi",
         type: "Toponim.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_toponim&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_toponim&bbox=112.57526072600001%2C-8.048571480999954%2C112.68837819200007%2C-7.912429802999952&width=638&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1153,10 +1153,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 17,
         file_name: "Jalan",
+        store: "geovault:malang_irigasi",
         type: "Jalan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_jalan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_jalan&bbox=112.56944605229353%2C-8.050958581073587%2C112.69341873668537%2C-7.910836884914275&width=679&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1168,10 +1168,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 18,
         file_name: "Perkebunan",
+        store: "geovault:malang_irigasi",
         type: "Perkebunan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_perkebunan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1183,10 +1183,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 19,
         file_name: "Pemanfaatan",
+        store: "geovault:malang_irigasi",
         type: "Pemanfaatan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemanfaatan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemanfaatan&bbox=112.59338985700012%2C-8.045337179666303%2C112.68035139100004%2C-7.921137443999973&width=537&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1198,10 +1198,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 20,
         file_name: "Sungai",
+        store: "geovault:malang_irigasi",
         type: "Sungai.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1213,10 +1213,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 21,
         file_name: "Genangan",
+        store: "geovault:malang_irigasi",
         type: "Genangan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1228,10 +1228,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 22,
         file_name: "Curah Hujan",
+        store: "geovault:malang_irigasi",
         type: "Curah Hujan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan_01022024_05022024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&styles=&format=image%2Fgeotiff",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_curah_hujan_01022024_05022024&bbox=110.88803867171373%2C-8.785523478688916%2C116.27793037643086%2C-5.0395487439105136&width=768&height=533&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1251,10 +1251,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 23,
         file_name: "Ladang",
+        store: "geovault:malang_irigasi",
         type: "Ladang.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_ladang&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_ladang&bbox=112.56894724600018%2C-8.050913371254827%2C112.69345983100007%2C-7.920095094999931&width=730&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1266,10 +1266,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 24,
         file_name: "Pemukiman",
+        store: "geovault:malang_irigasi",
         type: "Pemukiman.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_pemukiman&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_pemukiman&bbox=112.57221076700007%2C-8.05024337499998%2C112.69344784400019%2C-7.910846883999881&width=667&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1281,10 +1281,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 25,
         file_name: "Toponim",
+        store: "geovault:malang_irigasi",
         type: "Toponim.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_toponim&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_toponim&bbox=112.57526072600001%2C-8.048571480999954%2C112.68837819200007%2C-7.912429802999952&width=638&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1296,10 +1296,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 26,
         file_name: "Jalan",
+        store: "geovault:malang_irigasi",
         type: "Jalan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_jalan&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_jalan&bbox=112.56944605229353%2C-8.050958581073587%2C112.69341873668537%2C-7.910836884914275&width=679&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1311,10 +1311,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 27,
         file_name: "Sawah",
+        store: "geovault:malang_irigasi",
         type: "Sawah.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sawah&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sawah&bbox=112.58595103100006%2C-8.051574676999929%2C112.69377060300023%2C-7.911025081926537&width=589&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Bondoyudo Bedadung",
         source: "Balai",
@@ -1326,10 +1326,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 28,
         file_name: "Sungai",
+        store: "geovault:malang_irigasi",
         type: "Sungai.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Madura Bawean",
         source: "Balai",
@@ -1341,10 +1341,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 29,
         file_name: "Irigasi",
+        store: "geovault:malang_irigasi",
         type: "Irigasi.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1356,10 +1356,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 30,
         file_name: "Genangan",
+        store: "geovault:malang_irigasi",
         type: "Genangan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1371,10 +1371,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 31,
         file_name: "Penutupan Lahan",
+        store: "geovault:malang_irigasi",
         type: "Penutupan Lahan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1386,10 +1386,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 32,
         file_name: "Genangan",
+        store: "geovault:malang_irigasi",
         type: "Genangan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_irigasi&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_irigasi&bbox=112.59756568440889%2C-8.041155222535451%2C112.6933777743648%2C-7.9181595058564795&width=598&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
@@ -1401,10 +1401,10 @@ export const paginationDatas: PaginatedData[] = [
       {
         feature_id: 33,
         file_name: "Penutupan Lahan",
+        store: "geovault:malang_irigasi",
         type: "Penutupan Lahan.zip",
         download:
           "http://localhost:8080/geoserver/geovault/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geovault%3Amalang_sungai&outputFormat=SHAPE-ZIP",
-        wms: "http://localhost:8080/geoserver/geovault/wms?service=WMS&version=1.1.0&request=GetMap&layers=geovault%3Amalang_sungai&bbox=112.59145066017325%2C-8.04602961590412%2C112.68688491000015%2C-7.917497864999882&width=570&height=768&srs=EPSG%3A4326&transparent=true&format=image%2Fpng",
         bbws: "BBWS Brantas",
         ws: "WS Brantas",
         source: "Balai",
